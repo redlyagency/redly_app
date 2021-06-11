@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
+import './fonts/fonts.css';
+
+const GlobalStyle = createGlobalStyle`
+  * {
+    font-family: 'Poppins', sans-serif;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  body {
+    /* styled */
+  }
+`;
+const AppWrapper = styled.div`
+  /* styled */
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <AppWrapper>
+
+      </AppWrapper>
+    </>
   );
 }
 
