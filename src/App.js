@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 import styled from 'styled-components';
 import './fonts/fonts.css';
@@ -25,7 +26,8 @@ const GlobalStyle = createGlobalStyle`
     user-select: none;
   }
   body {
-    /* styled */
+    box-sizing: border-box;
+    margin: 0; padding: 0;
   }
 `;
 const AppWrapper = styled.div`
@@ -37,7 +39,7 @@ function App() {
     <>
       <GlobalStyle />
       <AppWrapper>
-      <Router>
+        <Router>
         
         <div className="container">
         <Navbar />
@@ -50,7 +52,7 @@ function App() {
           <Route path="/contact" component={ Contact } />
           <Route path="*" component={ NotFound } />
         </Switch>
-      </Router>
+        </Router>
       </AppWrapper>
     </>
   );

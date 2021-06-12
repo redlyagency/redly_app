@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { Container } from 'react-bootstrap';
+
+
 
 const BgDiv = styled.div`
     background-color: green;
@@ -9,7 +12,12 @@ const BgDiv = styled.div`
 class Navbar extends React.Component {
     render() {
         return (
-            <BgDiv>
+            <>
+                <Container fluid>
+                    fsdfs
+                </Container>
+
+                <BgDiv>
                 <h1>Navbar</h1>
                 <ul>
             <li>
@@ -26,6 +34,7 @@ class Navbar extends React.Component {
             </li>
           </ul>
             </BgDiv>
+            </>
         );
     }
 }

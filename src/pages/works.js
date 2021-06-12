@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BackButton from './backbutton';
+import BackButton from '../components/Buttons/backbutton';
 
 class List extends React.Component {
     render() {
