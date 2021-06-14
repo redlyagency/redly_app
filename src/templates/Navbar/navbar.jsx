@@ -14,6 +14,10 @@ const NavbarModificated = styled(Navbar)`
 const NavLogo = styled(Logo)`
     height: 50px;
     margin: 0 0 0 ${ theme.margin.default };
+
+    @media ${ theme.device.tablet } {
+        margin: 0 0 0 ${ theme.margin.mobile };
+    }
 `;
 const NavUl = styled.ul`
     margin: 0 ${ theme.margin.default } 0 0;
@@ -61,6 +65,11 @@ const NavbarBlank = styled.div`
     width: 100%;
     height: 80px;
 `;
+const NavbarMobileIcon = styled.div`
+    background-color: red;
+    width: 50px;
+    height: 50px;
+`;
 
 const NavbarData = {
     home: 'Home',
@@ -97,7 +106,9 @@ function NavbarMain() {
                             <NavLogo />
                         </Navbar.Brand>
                     </NavLinkAB>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav">
+                        <NavbarMobileIcon />
+                    </Navbar.Toggle>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="navbar-nav ml-auto">
                             <NavUl>

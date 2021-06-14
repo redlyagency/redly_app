@@ -1,17 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'react-bootstrap';
 
 class List extends React.Component {
     render() {
         return (
-            <div>
-                <p>That is a home page</p>
-                <ul>
-                    <li><Link to="/about">React</Link></li>
-                </ul>
-                <ul>
-                    <li>   <Link to="/">Home</Link></li>
-                </ul>
+            <div className="page-test-item-test container">
+                <Container>
+                    <Row>
+                        <Col>Test</Col>
+                    </Row>
+                    <Row>
+                        <Col>Test</Col>
+                        <Col>Test</Col>
+                    </Row>
+                </Container>
             </div>
         );
     }
