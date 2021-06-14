@@ -56,20 +56,20 @@ function App({ location }) {
           <Navbar />
           <Route render={({location}) => (
             <TransitionGroup>
-              <CSSTransition
-                key={location.key}
-                timeout={ 300 }
-                classNames="fade"
-              >
-                <Switch location={location}>
-                  <Route exact path="/" component={ Home } />
-                  <Route path="/about" component={ About } />
-                  <Route path="/works" component={ Works } />
-                  <Route path="/contact" component={ Contact } />
-                  <Route path="*" component={ NotFound } />
-                </Switch>
-              </CSSTransition>
-            </TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={ 300 }
+              classNames="fade"
+            >
+              <Switch location={location}>
+                <Route exact path="/" component={ Home } />
+                <Route path="/about" component={ About } />
+                <Route path="/works" component={ Works } />
+                <Route path="/contact" component={ Contact } />
+                <Route path="*" component={ NotFound } />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
           )} />
         </Router>
       </AppWrapper>
