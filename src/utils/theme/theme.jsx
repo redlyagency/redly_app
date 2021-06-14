@@ -14,9 +14,10 @@ export const colors = {
     white: '#FFFFFF',
     gray: '#5D5D5D',
     lightergray: '#E3E3E3',
+    transparent: 'transparent'
 };
 const margin = {
-    default: '4%',
+    default: '20%',
 }
 const size = {
     mobileS: '320px',
