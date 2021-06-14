@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container } from 'react-bootstrap';
 import { createGlobalStyle } from 'styled-components';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import './fonts/fonts.css';
 import {
@@ -47,26 +47,30 @@ const AppWrapper = styled.div`
   position: relative;
 `;
 
-function App() {
+function App({ location }) {
   return (
     <>
       <GlobalStyle />
       <AppWrapper>
         <Router>
-        <Navbar />
-        
-        <Container fluid>
-        
-        App.js - test <br />App.js - test <br />App.jsdfsds - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />
-        App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />App.js - test <br />
-        </Container>
-        <Switch>
-          <Route exact path="/" component={ Home } />
-          <Route path="/about" component={ About } />
-          <Route path="/works" component={ Works } />
-          <Route path="/contact" component={ Contact } />
-          <Route path="*" component={ NotFound } />
-        </Switch>
+          <Navbar />
+          <Route render={({location}) => (
+            <TransitionGroup>
+            <CSSTransition
+              key={location.key}
+              timeout={ 300 }
+              classNames="fade"
+            >
+              <Switch location={location}>
+                <Route exact path="/" component={ Home } />
+                <Route path="/about" component={ About } />
+                <Route path="/works" component={ Works } />
+                <Route path="/contact" component={ Contact } />
+                <Route path="*" component={ NotFound } />
+              </Switch>
+            </CSSTransition>
+          </TransitionGroup>
+          )} />
         </Router>
       </AppWrapper>
     </>

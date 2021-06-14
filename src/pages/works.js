@@ -5,6 +5,7 @@ import BackButton from '../components/Buttons/backbutton';
 class List extends React.Component {
     render() {
         return (
+          <div className="page-test-item-test">
             <div>
                 <p>That is a works page</p>
                 <ul>
@@ -23,6 +24,7 @@ class List extends React.Component {
           </ul>
 
                 <BackButton />
+            </div>
             </div>
         );
     }

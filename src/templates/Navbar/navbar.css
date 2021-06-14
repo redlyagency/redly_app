@@ -63,3 +63,28 @@ a:hover {
     color: black;
     text-decoration: none;
 }
+
+/* animation section */
+.page-test-item-test {
+    position: absolute;
+}
+
+.fade-enter,
+.fade-appear {
+    opacity: 0;
+    z-index: 1;
+    transform: translateY(150px);
+}
+.fade-appear-active,
+.fade-enter.fade-ender-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+.fade-exit {
+    opacity: 1;
+    transform: translatey(0);
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
+}
