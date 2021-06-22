@@ -5,7 +5,8 @@ import { theme } from '../../utils/theme/theme';
 import { Navbar, Nav } from 'react-bootstrap';
 import './navbar.css';
 
-import Logo from '../../assets/svg/logo';
+import Logo from '../../assets/svg/Logo';
+import NavbarMobileIcon from '../../components/Navbar/nav-mobile-icon';
 
 const NavbarModificated = styled(Navbar)`
     position: sticky;
@@ -22,7 +23,12 @@ const NavLogo = styled(Logo)`
 const NavUl = styled.ul`
     margin: 0 ${ theme.margin.default } 0 0;
     padding: 0;
-    width: 600px;
+    width: 630px;
+
+    @media ${ theme.device.laptop } {
+        margin: 0;
+        width: 550px;
+    }
 `;
 const NavLi = styled.li`
     display: block;
@@ -33,11 +39,18 @@ const NavLi = styled.li`
 const NavLinkAB = styled(Link)`
 
 `;
+const NavBarIconMobileControl = styled(Navbar.Toggle)`
+    border: none;
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+`;
 const NavLinkA = styled(NavLink)`
     color: ${ theme.colors.black };
     font-family: 'Poppins-MediumItalic';
     font-size: 20px;
     position: relative;
+    text-transform: uppercase;
 
     :hover {
         margin-left: 4px;
@@ -60,22 +73,13 @@ const NavLinkA = styled(NavLink)`
 const CVDEdfvdfg = styled.div`
     padding: 0;
 `;
-const NavbarBlank = styled.div`
-    background-color: ${ theme.colors.transparent };
-    width: 100%;
-    height: 80px;
-`;
-const NavbarMobileIcon = styled.div`
-    background-color: red;
-    width: 50px;
-    height: 50px;
-`;
 
 const NavbarData = {
     home: 'Home',
     about: 'About',
     works: 'Works',
     contact: 'Contact'
+    //put this into data model
 }
 
 function NavbarMain() {
@@ -98,17 +102,16 @@ function NavbarMain() {
   
     return (
         <>
-            <NavbarBlank />
             <CVDEdfvdfg className={navbar}>
-                <NavbarModificated className="container-fluid navbar-expand-md navbar" collapseOnSelect expand="lg" bg="transparent" variant="dark">
+                <NavbarModificated className="container-fluid navbar-expand-lg navbar" collapseOnSelect expand="lg" bg="transparent" variant="dark">
                     <NavLinkAB to="/">
                         <Navbar.Brand>
                             <NavLogo />
                         </Navbar.Brand>
                     </NavLinkAB>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav">
+                    <NavBarIconMobileControl aria-controls="responsive-navbar-nav">
                         <NavbarMobileIcon />
-                    </Navbar.Toggle>
+                    </NavBarIconMobileControl>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="navbar-nav ml-auto">
                             <NavUl>

@@ -1,22 +1,42 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import styled from 'styled-components';
 
-class List extends React.Component {
+import HeroTemplate from '../templates/Home/heroTemplate/heroTemplate';
+import AboutTemplate from '../templates/Home/aboutTemplate/aboutTemplate';
+import { theme } from '../utils/theme/theme';
+
+const HeroWrapper = styled.div`
+    //background-color: green;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    position: relative;
+    
+    @media ${ theme.device.browserzoom } {
+        height: 1080px;
+        min-height: auto;
+    }
+`;
+const AboutWrapper = styled.div`
+    position: relative;
+    background-color: white;
+    height: 500px;
+`;
+
+class Home extends React.Component {
     render() {
         return (
-            <div className="page-test-item-test container">
-                <Container>
-                    <Row>
-                        <Col>Test</Col>
-                    </Row>
-                    <Row>
-                        <Col>Test</Col>
-                        <Col>Test</Col>
-                    </Row>
-                </Container>
-            </div>
+            <>
+                <HeroWrapper>
+                    <HeroTemplate />
+                </HeroWrapper>
+                <AboutWrapper>
+                    <AboutTemplate />
+                </AboutWrapper>
+            </>
         );
     }
 }
 
-export default List;
+export default Home;

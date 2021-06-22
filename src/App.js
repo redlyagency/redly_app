@@ -39,10 +39,9 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 const AppWrapper = styled.div`
-  background-color: gray;
-  //background-image: ${theme.colors.bg_gradient};
+  //background-color: gray;
+  background-image: ${theme.colors.bg_gradient};
   max-width: 1920px;
-  height: 9999px;
   margin: 0 auto 0 auto;
   position: relative;
 `;

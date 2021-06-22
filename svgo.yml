@@ -6,7 +6,7 @@ plugins:
   - removeMetadata: true
   - removeEditorsNSData: true
   - cleanupIDs: true
-  - removeRasterImages: true
+  - removeRasterImages: false
   - removeUselessDefs: true
   - removeUnknownsAndDefaults: true
   - removeUselessStrokeAndFill: true

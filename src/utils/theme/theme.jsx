@@ -28,7 +28,8 @@ const size = {
     tablet: '768px',
     laptop: '1024px',
     laptopL: '1440px',
-    desktop: '2560px'
+    desktop: '2560px',
+    browserviewportheight: '1100px'
 }
 export const device = {
     mobileS: `(max-width: ${size.mobileS})`,
@@ -39,6 +40,7 @@ export const device = {
     laptopL: `(max-width: ${size.laptopL})`,
     desktop: `(max-width: ${size.desktop})`,
     desktopL: `(max-width: ${size.desktopL})`,
+    browserzoom: `(min-height: ${size.browserviewportheight})`
 };
 
 export const theme = {
