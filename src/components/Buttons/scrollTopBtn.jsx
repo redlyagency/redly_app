@@ -29,7 +29,7 @@ const ButtonWrapperPosition = styled.div`
     }
 `;
 const H1StyledScrollText = styled.h1`
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     text-transform: uppercase;
     font-size: 18px;
     font-family: 'Poppins-SemiBold';
@@ -38,31 +38,32 @@ const H1StyledScrollText = styled.h1`
     width: 150px;
     position: absolute;
     left: -50px;
-    top: 50px;
+    bottom: 50px;
     line-height: 50px;
 `;
 const ArrowStyledSVG = styled(ArrowSVG)`
+    transform: rotate(180deg);
     width: 50px;
     height: 50px;
     display: inline-block;
     position: absolute;
-    bottom: 0;
-    left: 3px;
+    top: -15px;
+    left: -3px;
 `;
 
-class scrollDownBtn extends React.Component {
+class scrollUpBtn extends React.Component {
     render() {
         return (
-            <Link to="downBtnTriggerHandle" offset={-80} smooth={true}>
+            <Link to="topBtnTriggerHandle" offset={-250} smooth={true}>
                 <ButtonWrapperPosition>
-                    <H1StyledScrollText>
-                        { btnPackage.ArrowBtn.ScrollDown }
-                    </H1StyledScrollText>
                     <ArrowStyledSVG />
+                    <H1StyledScrollText>
+                        { btnPackage.ArrowBtn.ScrollToTop }
+                    </H1StyledScrollText>
                 </ButtonWrapperPosition>
             </Link>
         )
     }
 }
 
-export default scrollDownBtn;
+export default scrollUpBtn;

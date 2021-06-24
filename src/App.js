@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     #root {margin: 0;padding: 0;}
     ::-webkit-scrollbar {width: 5px;} 
     ::-webkit-scrollbar-track {background-color: white;}
-    ::-webkit-scrollbar-thumb {background-color: black;}
+    ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.darkergray };}
   body {
     box-sizing: border-box;
     margin: 0; padding: 0;

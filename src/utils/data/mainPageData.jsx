@@ -1,13 +1,3 @@
-
-
-
-
-//to edit
-//to edit
-//to edit
-
-
-
 export const Navbar = {
 
 }
@@ -16,32 +6,33 @@ export const Hero = {
     //The title of a hero website section.
     HeroUnderTitle: 'Hello, our agency deals with creating websites and graphic design. We are able to make any project at a convenient price.',
     //The text under title of a hero webiste section.
-    HeroBtnContent: 'See our works',
-    //The content of a button on a hero website.
 }
 export const About = {
     TitleAbout: 'About.',
     //The title of a About section.
     AboutContent: 'Hello, our agency deals with creating websites and graphic design. We are able to make any project at a convenient price. Hello, our agency deals with creating websites and graphic design. We are able to make any project at a convenient price.',
     //The content of a About section.
-    AboutBtnContent: 'Read more',
-    //The content of a button on a hero website.
 }
 export const Works = {
     TitleWorks: 'Works.',
     //The title of a Works section.
     WorksUnderTitle: 'Here you can find our latest works.',
-    //The 
+    //The content under section title.
+    ContentUnderGallery: 'Here you will find more of our work.',
+    //the content under menu gallery.
 }
 export const Footer = {
-
+    FooterTitle: "Let's work together.",
+    //The title of a Footer section.
+    FooterUnderTitle: 'We are available for freelance work.',
+    //The content under title of a footer section.
+    FooterFooterTitle: '© Redly Agency 2021',
 }
 
-
 export const content = {
-    Navbar, //
+    Navbar, //All paragraph elements for navbar website section.
     Hero, //All paragraph elements for hero website section.
-    About, //
-    Works, //
-    Footer //
+    About, //All paragraph elements for about website section.
+    Works, //All paragraph elements for works website section.
+    Footer //All paragraph elements for footer website section.
 };

@@ -6,6 +6,8 @@ const MediaWrapper = styled.div`
     position: absolute;
     left: 0;
     bottom: -70px;
+
+  //  @media 
 `;
 const ULmedia = styled.ul`
     display: inline;

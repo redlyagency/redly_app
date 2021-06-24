@@ -1,17 +1,17 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { content } from '../../../utils/data/mainPageData';
+import { content } from '../../utils/data/404PageData';
 import styled from 'styled-components';
-import { theme } from '../../../utils/theme/theme';
-import { btnPackage } from '../../../utils/data/btnPageData';
+import { theme } from '../../utils/theme/theme';
+import { btnPackage } from '../../utils/data/btnPageData';
 import { NavLink } from 'react-router-dom';
 
-import HeroIMG from '../../../assets/svg/HeroMainPic';
-import HeroElipse from '../../../assets/svg/HeroElipse';
+import HeroIMG from '../../assets/svg/HeroMainPic';
+import HeroElipse from '../../assets/svg/HeroElipse';
 
-import WorksBtn from '../../../components/Buttons/mainBtn';
-import HeroSocialMediaBar from '../../../components/HeroSocialMedia/heroSocialMedia';
-import ScrollDownBtn from '../../../components/Buttons/scrollDownBtn';
+import WorksBtn from '../../components/Buttons/mainBtn';
+import HeroSocialMediaBar from '../../components/HeroSocialMedia/heroSocialMedia';
+import ScrollDownBtn from '../../components/Buttons/scrollDownBtn';
 
 const BodyWrapperHome = styled(Container)`
     //background-color: red;
@@ -36,20 +36,12 @@ const HeroTitleHero = styled.h1`
     font-family: 'Poppins-SemiBold';
     font-size: ${ theme.fontSize.DF_47 };
     margin-top: 70px;
-
-    @media ${ theme.device.laptop } {
-        font-size: ${ theme.fontSize.DFF_40 };
-    }
 `;
 const HeroUnderTitleHero = styled.h1`
     color: ${ theme.colors.gray };
     font-family: 'Poppins-SemiBold';
     font-size: ${ theme.fontSize.DB_17 };
     margin-top: 25px;
-
-    @media ${ theme.device.laptop } {
-        font-size: ${ theme.fontSize.DBB_15 };
-    }
 `;
 const HeroElipseStyled = styled(HeroElipse)`
     position: absolute;
@@ -68,10 +60,10 @@ class HeroTemplate extends React.Component {
                     <Row>
                         <ColLeft md="5" xs="12">
                             <ColLeftWrapper>
-                                <HeroTitleHero> { content.Hero.HeroMainTitle } </HeroTitleHero>
-                                <HeroUnderTitleHero> { content.Hero.HeroUnderTitle } </HeroUnderTitleHero>
-                                <NavLink to="/works" activeClassName="active">
-                                    <WorksBtn style={{ marginTop: '30px', width: '50%' }} name={ btnPackage.MainBtn.SeeOurWorks } />
+                                <HeroTitleHero> { content.NotFound.ErrorContent } </HeroTitleHero>
+                                <HeroUnderTitleHero> { content.NotFound.ErrorUnderTitle } </HeroUnderTitleHero>
+                                <NavLink to="/" activeClassName="active">
+                                    <WorksBtn style={{ marginTop: '30px', width: '46%' }} name={ btnPackage.MainBtn.GoHome } />
                                 </NavLink>
                             </ColLeftWrapper>
                         </ColLeft>

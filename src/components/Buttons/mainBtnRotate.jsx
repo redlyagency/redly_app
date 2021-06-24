@@ -5,10 +5,12 @@ import ArrowIcon from '../../assets/svg/ArrowIcon';
 
 const WrapperDIVLink = styled.div`
     position: relative;
-    width: 46%;
     height: 50px;
     transition: 0.1s ease-in-out;
-    margin-top: 30px;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 0;
+    top: 0;
     :hover {
         margin-left: 10px;
         transition: 0.1s ease-in-out;
@@ -53,18 +55,18 @@ const ArrowIconStyled = styled(ArrowIcon)`
     z-index: 200;
 `;
 
-class MainButton extends React.Component {
+class MainButtonRotate extends React.Component {
     render() {
         return (
-            
-            <WrapperDIVLink>
+            <WrapperDIVLink style={this.props.style}>
                 <CircleDecoration className="circleSwap" />
-                <PTitle>See our works</PTitle>
+                <PTitle>
+                    {this.props.name}
+                </PTitle>
                 <ArrowIconStyled />
             </WrapperDIVLink>
-            
         )
     }
 }
 
-export default MainButton;
+export default MainButtonRotate;
