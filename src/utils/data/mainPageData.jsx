@@ -1,5 +1,12 @@
 export const Navbar = {
-
+    home: 'Home',
+    //Home button.
+    about: 'About',
+    //About button.
+    works: 'Works',
+    //Works button.
+    contact: 'Contact'
+    //Contact button.
 }
 export const Hero = {
     HeroMainTitle: 'web development & graphic design.',

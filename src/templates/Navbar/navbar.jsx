@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from '../../utils/theme/theme';
+import { content } from '../../utils/data/mainPageData';
 import { Navbar, Nav } from 'react-bootstrap';
 import './navbar.css';
 
@@ -13,7 +14,7 @@ const NavbarModificated = styled(Navbar)`
     top: 0;
 `;
 const NavLogo = styled(Logo)`
-    height: 50px;
+    height: 40px;
     margin: 0 0 0 ${ theme.margin.default };
 
     @media ${ theme.device.tablet } {
@@ -35,9 +36,6 @@ const NavLi = styled.li`
     text-align: center;
     float: left;
     padding-left: 50px;
-`;
-const NavLinkAB = styled(Link)`
-
 `;
 const NavBarIconMobileControl = styled(Navbar.Toggle)`
     border: none;
@@ -74,14 +72,6 @@ const CVDEdfvdfg = styled.div`
     padding: 0;
 `;
 
-const NavbarData = {
-    home: 'Home',
-    about: 'About',
-    works: 'Works',
-    contact: 'Contact'
-    //put this into data model
-}
-
 function NavbarMain() {
 
     const [navbar, setNavbar] = useState("navbar");
@@ -104,11 +94,11 @@ function NavbarMain() {
         <>
             <CVDEdfvdfg className={navbar}>
                 <NavbarModificated className="container-fluid navbar-expand-lg navbar" collapseOnSelect expand="lg" bg="transparent" variant="dark">
-                    <NavLinkAB to="/">
+                    <NavLink to="/">
                         <Navbar.Brand>
                             <NavLogo />
                         </Navbar.Brand>
-                    </NavLinkAB>
+                    </NavLink>
                     <NavBarIconMobileControl aria-controls="responsive-navbar-nav">
                         <NavbarMobileIcon />
                     </NavBarIconMobileControl>
@@ -117,22 +107,22 @@ function NavbarMain() {
                             <NavUl>
                                 <NavLi>
                                     <NavLinkA to="/" activeClassName="active" exact={true}>
-                                        { NavbarData.home }
+                                        { content.Navbar.home }
                                     </NavLinkA>
                                 </NavLi>
                                 <NavLi>
                                     <NavLinkA to="/about" activeClassName="active">
-                                        { NavbarData.about }
+                                        { content.Navbar.about }
                                     </NavLinkA>
                                 </NavLi>
                                 <NavLi>
                                     <NavLinkA to="/works" activeClassName="active">
-                                        { NavbarData.works }
+                                        { content.Navbar.works }
                                     </NavLinkA>
                                 </NavLi>
                                 <NavLi>
                                     <NavLinkA to="/contact" activeClassName="active">
-                                        { NavbarData.contact }
+                                        { content.Navbar.contact }
                                     </NavLinkA>
                                 </NavLi>
                             </NavUl>

@@ -23,6 +23,10 @@ const BodyWrapperHome = styled(Container)`
 const ColLeft = styled(Col)`
     margin-right: 50px;
     position: relative;
+
+    @media ${ theme.device.tablet } {
+        margin-right: 35px;
+    }
 `;
 const ColLeftWrapper = styled.div`
     margin-top: 55%;
@@ -30,6 +34,10 @@ const ColLeftWrapper = styled.div`
 `;
 const ColRight = styled(Col)`
     margin-left: 50px;
+
+    @media ${ theme.device.tablet } {
+        margin-left: 35px;
+    }
 `;
 const HeroTitleHero = styled.h1`
     color: ${ theme.colors.black };
@@ -40,6 +48,9 @@ const HeroTitleHero = styled.h1`
     @media ${ theme.device.laptop } {
         font-size: ${ theme.fontSize.DFF_40 };
     }
+    @media ${ theme.device.tablet } {
+        font-size: ${ theme.fontSize.DFFF_29 };
+    }
 `;
 const HeroUnderTitleHero = styled.h1`
     color: ${ theme.colors.gray };
@@ -49,6 +60,9 @@ const HeroUnderTitleHero = styled.h1`
 
     @media ${ theme.device.laptop } {
         font-size: ${ theme.fontSize.DBB_15 };
+    }
+    @media ${ theme.device.tablet } {
+        font-size: ${ theme.fontSize.DBBB_15 };
     }
 `;
 const HeroElipseStyled = styled(HeroElipse)`
@@ -66,17 +80,41 @@ class HeroTemplate extends React.Component {
             <>
                 <BodyWrapperHome id="topBtnTriggerHandle">
                     <Row>
-                        <ColLeft md="5" xs="12">
+                        <ColLeft
+                        md={{
+                            span: 5,
+                            order: 'first'
+                        }}
+                        xs={{
+                            span: 12,
+                            order: 'last'
+                        }}
+                        >
                             <ColLeftWrapper>
                                 <HeroTitleHero> { content.Hero.HeroMainTitle } </HeroTitleHero>
                                 <HeroUnderTitleHero> { content.Hero.HeroUnderTitle } </HeroUnderTitleHero>
                                 <NavLink to="/works" activeClassName="active">
-                                    <WorksBtn style={{ marginTop: '30px', width: '50%' }} name={ btnPackage.MainBtn.SeeOurWorks } />
+                                    <WorksBtn
+                                        style={{
+                                            marginTop: '30px',
+                                            width: '50%'
+                                    }}
+                                        name={ btnPackage.MainBtn.SeeOurWorks }
+                                    />
                                 </NavLink>
                             </ColLeftWrapper>
                         </ColLeft>
                         <HeroElipseStyled />
-                        <ColRight md="5" xs="12">
+                        <ColRight
+                        md={{
+                            span: 5,
+                            order: 'last'
+                            }}
+                        xs={{
+                            span: 12,
+                            order: 'first'
+                            }}
+                        >
                             <HeroIMG />
                         </ColRight>
                     </Row>

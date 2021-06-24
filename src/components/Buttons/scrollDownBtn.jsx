@@ -53,7 +53,7 @@ const ArrowStyledSVG = styled(ArrowSVG)`
 class scrollDownBtn extends React.Component {
     render() {
         return (
-            <Link to="downBtnTriggerHandle" offset={-80} smooth={true}>
+            <Link to="downBtnTriggerHandle" offset={-70} smooth={true}>
                 <ButtonWrapperPosition>
                     <H1StyledScrollText>
                         { btnPackage.ArrowBtn.ScrollDown }

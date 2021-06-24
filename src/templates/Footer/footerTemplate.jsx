@@ -23,6 +23,12 @@ const FooterTitleWrapper = styled.div`
     @media ${ theme.device.laptop } {
         width: 70%;
     }
+    @media ${ theme.device.tablet } {
+        width: 90%;
+    }
+    @media ${ theme.device.mobileL } {
+        width: 100%;
+    }
 `;
 const FooterBigTitle = styled.h1`
     font-size: ${ theme.fontSize.DG_58 };
@@ -32,6 +38,10 @@ const FooterBigTitle = styled.h1`
     text-align: left;
     position: relative;
     z-index: 40;
+
+    @media ${ theme.device.mobileL } {
+        font-size: ${ theme.fontSize.DGG_58 };
+    }
 `;
 const FooterUnderTitle = styled.h2`
     font-size: ${ theme.fontSize.DC_18 };
@@ -54,6 +64,13 @@ const DecoCircle1 = styled(FooterCircle1)`
     width: 150px;
     height: 150px;
     z-index: 1;
+
+    @media ${ theme.device.tablet } {
+        right: 30px;
+    }
+    @media ${ theme.device.mobileL } {
+        right: -20px;
+    }
 `;
 const DecoCircle2 = styled(FooterCircle2)`
     position: absolute;
