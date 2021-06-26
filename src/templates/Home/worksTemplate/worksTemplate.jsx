@@ -41,9 +41,9 @@ class WorksTemplate extends React.Component {
                         <H2ContentParagraph>
                             { content.Works.ContentUnderGallery }
                         </H2ContentParagraph>
-                        <NavLink to="/works" activeClassName="active">
+                      {/*  <NavLink to="/works" activeClassName="active">
                             <BiggerBtn name={ btnPackage.BiggerBtn.ViewAllProjects } />
-                        </NavLink>
+                        </NavLink> */}
                         <Blank70px />
                     </ContentParagraph>
                     <ScrollUpBtn />

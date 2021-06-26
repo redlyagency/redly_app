@@ -16,6 +16,9 @@ const ButtonWrapperPosition = styled.div`
     animation-iteration-count: infinite;
     animation-duration: 2s;
 
+    @media ${ theme.device.laptop } {
+        right: 8px;
+    }
     @media ${ theme.device.mobileL } {
         display: none;
     }

@@ -5,9 +5,11 @@ import { theme } from '../../utils/theme/theme';
 const MediaWrapper = styled.div`
     position: absolute;
     left: 0;
-    bottom: -70px;
+    bottom: -100px;
 
-  //  @media 
+    @media ${ theme.device.mobileL } {
+        display: none;
+    }
 `;
 const ULmedia = styled.ul`
     display: inline;
@@ -53,7 +55,11 @@ const Amedia = styled.a`
     color: ${ theme.colors.gray };
     text-decoration: underline;
     font-family: 'Poppins-SemiBold';
-    font-size: 18px;
+    font-size: ${ theme.fontSize.DC_18 };
+
+    @media ${ theme.device.tablet } {
+        font-size: ${ theme.fontSize.DCC_18 };
+    }
 `;
 
 class HeroSocialMediaBar extends React.Component {

@@ -14,45 +14,43 @@ import HeroSocialMediaBar from '../../../components/HeroSocialMedia/heroSocialMe
 import ScrollDownBtn from '../../../components/Buttons/scrollDownBtn';
 
 const BodyWrapperHome = styled(Container)`
-    //background-color: red;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 `;
 const ColLeft = styled(Col)`
-    margin-right: 50px;
-    position: relative;
-
-    @media ${ theme.device.tablet } {
-        margin-right: 35px;
-    }
-`;
-const ColLeftWrapper = styled.div`
-    margin-top: 55%;
+    margin-top: 43%;
     transform: translateY(-50%);
-`;
-const ColRight = styled(Col)`
-    margin-left: 50px;
 
+    @media ${ theme.device.laptop } {
+        margin-top: 50%;
+    }
     @media ${ theme.device.tablet } {
-        margin-left: 35px;
+        margin-top: 55%;
     }
     @media ${ theme.device.mobileL } {
-        margin-left: 40px;
+        margin-top: 0;
+        transform: translateY(0);
     }
 `;
+const ColRight = styled(Col)``;
 const HeroTitleHero = styled.h1`
     color: ${ theme.colors.black };
     font-family: 'Poppins-SemiBold';
     font-size: ${ theme.fontSize.DF_47 };
-    margin-top: 70px;
-
+    
     @media ${ theme.device.laptop } {
-        font-size: ${ theme.fontSize.DFF_40 };
+        font-size: ${ theme.fontSize.DFF_47 };
     }
     @media ${ theme.device.tablet } {
-        font-size: ${ theme.fontSize.DFFF_29 };
+        font-size: ${ theme.fontSize.DFFF_47 };
+    }
+    @media ${ theme.device.mobileL } {
+        font-size: ${ theme.fontSize.MF_47 };
+    }
+    @media ${ theme.device.mobileM } {
+        font-size: ${ theme.fontSize.MFF_47 };
     }
 `;
 const HeroUnderTitleHero = styled.h1`
@@ -62,10 +60,13 @@ const HeroUnderTitleHero = styled.h1`
     margin-top: 25px;
 
     @media ${ theme.device.laptop } {
-        font-size: ${ theme.fontSize.DBB_15 };
+        font-size: ${ theme.fontSize.DBB_17 };
     }
     @media ${ theme.device.tablet } {
-        font-size: ${ theme.fontSize.DBBB_15 };
+        font-size: ${ theme.fontSize.DBBB_17 };
+    }
+    @media ${ theme.device.mobileL } {
+        font-size: ${ theme.fontSize.MB_17 };
     }
 `;
 const HeroElipseStyled = styled(HeroElipse)`
@@ -75,30 +76,37 @@ const HeroElipseStyled = styled(HeroElipse)`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    background-color: transparent;
 
     @media ${ theme.device.laptop } {
         width: 800px;
         height: 520px;
-        margin-top: -10px;
-        margin-left: -25px;
     }
     @media ${ theme.device.tablet } {
         width: 400px;
         height: 420px;
-        margin-top: -23px;
-        margin-left: -25px;
     }
     @media ${ theme.device.mobileL } {
-        width: 345px;
+        width: 320px;
         height: 390px;
-        margin-top: -115px;
-        margin-left: -57px;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0);
     }
 `;
 const HeroIMGStyled = styled(HeroIMG)`
+    height: 550px;
+
+    @media ${ theme.device.laptop } {
+        height: 500px;
+    }
+    @media ${ theme.device.tablet } {
+        height: 400px;
+    }
     @media ${ theme.device.mobileL } {
         width: 320px;
-        margin-top: 250px;
+        height: 400px;
+        margin-top: 0;
     }
 `;
 
@@ -107,10 +115,13 @@ class HeroTemplate extends React.Component {
         return (
             <>
                 <BodyWrapperHome id="topBtnTriggerHandle">
-                    <Row>
-                        <ColLeft
+                    <Row className="justify-content-center">
+                        <Col 
+                        style={{
+                            backgroundColor: '',
+                        }}
                         md={{
-                            span: 5,
+                            span: 6,
                             order: 'first'
                         }}
                         xs={{
@@ -118,35 +129,46 @@ class HeroTemplate extends React.Component {
                             order: 'last'
                         }}
                         >
-                            <ColLeftWrapper>
-                                <HeroTitleHero> { content.Hero.HeroMainTitle } </HeroTitleHero>
-                                <HeroUnderTitleHero> { content.Hero.HeroUnderTitle } </HeroUnderTitleHero>
-                                <NavLink to="/works" activeClassName="active">
-                                    <WorksBtn
-                                        style={{
-                                            marginTop: '30px',
-                                            width: '50%'
-                                    }}
-                                        name={ btnPackage.MainBtn.SeeOurWorks }
-                                    />
-                                </NavLink>
-                            </ColLeftWrapper>
-                        </ColLeft>
+                            <Row>
+                                <ColLeft>
+                                    <HeroTitleHero>
+                                        { content.Hero.HeroMainTitle }
+                                    </HeroTitleHero>
+                                    <HeroUnderTitleHero>
+                                        { content.Hero.HeroUnderTitle }
+                                    </HeroUnderTitleHero>
+                                    <NavLink to="/works" activeClassName="active">
+                                        <WorksBtn
+                                            style={{
+                                                marginTop: '30px',
+                                                width: '50%'
+                                            }}
+                                            name={ btnPackage.MainBtn.SeeOurWorks }
+                                        />
+                                    </NavLink>
+                                </ColLeft>
+                                <HeroSocialMediaBar />
+                            </Row>
+                        </Col>
                         <HeroElipseStyled />
                         <ColRight
-                        md={{
-                            span: 5,
-                            order: 'last'
+                        style={{
+                            backgroundColor: '',
                             }}
+                        md={{
+                            span: 6,
+                            order: 'last'
+                        }}
                         xs={{
                             span: 12,
                             order: 'first'
-                            }}
+                        }}
                         >
-                            <HeroIMGStyled />
+                            <Row className="justify-content-center">
+                                <HeroIMGStyled />
+                            </Row>
                         </ColRight>
                     </Row>
-                    <HeroSocialMediaBar />
                 </BodyWrapperHome>
                 <ScrollDownBtn />
             </>

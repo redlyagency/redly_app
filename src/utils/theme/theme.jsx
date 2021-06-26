@@ -11,23 +11,21 @@ export const fontSize = {
     //desktop version
     DA_15: '15px',
     DB_17: '17px',
-    DBB_15: '15px',
-    DBBB_15: '13px',
+    DBB_17: '15px',
+    DBBB_17: '13px',
     DC_18: '18px',
+    DCC_18: '17px',
     DD_18_5: '18.5px',
     DE_35: '35px',
     DF_47: '47px',
-    DFF_40: '40px',
-    DFFF_29: '29px',
+    DFF_47: '40px',
+    DFFF_47: '29px',
     DG_58: '58px',
     DGG_58: '52px',
     //mobile version
-    //MA_15: '15px',
     MB_17: '17px',
-    MD_18_5: '16px',
-    //ME_35: '35px',
-    MF_34: '34px'
-    //modify it!
+    MF_47: '36px',
+    MFF_47: '30px',
 }
 const margin = {
     default: '20%',

@@ -69,13 +69,17 @@ const DecoCircle1 = styled(FooterCircle1)`
         right: 30px;
     }
     @media ${ theme.device.mobileL } {
-        right: -20px;
+        right: 0;
     }
 `;
 const DecoCircle2 = styled(FooterCircle2)`
     position: absolute;
     height: 400px;
     bottom: 0;
+
+    @media ${ theme.device.mobileL } {
+        height: 300px;
+    }
 `;
 const FooterFooterSection = styled.div`
     position: absolute;
