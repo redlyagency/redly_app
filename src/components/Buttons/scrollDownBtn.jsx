@@ -16,6 +16,10 @@ const ButtonWrapperPosition = styled.div`
     animation-iteration-count: infinite;
     animation-duration: 2s;
 
+    @media ${ theme.device.mobileL } {
+        display: none;
+    }
+
     @keyframes movingArrowAnim1 {
         0% {
             transform: translateY(0);

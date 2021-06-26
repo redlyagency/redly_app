@@ -38,6 +38,9 @@ const ColRight = styled(Col)`
     @media ${ theme.device.tablet } {
         margin-left: 35px;
     }
+    @media ${ theme.device.mobileL } {
+        margin-left: 40px;
+    }
 `;
 const HeroTitleHero = styled.h1`
     color: ${ theme.colors.black };
@@ -72,6 +75,31 @@ const HeroElipseStyled = styled(HeroElipse)`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @media ${ theme.device.laptop } {
+        width: 800px;
+        height: 520px;
+        margin-top: -10px;
+        margin-left: -25px;
+    }
+    @media ${ theme.device.tablet } {
+        width: 400px;
+        height: 420px;
+        margin-top: -23px;
+        margin-left: -25px;
+    }
+    @media ${ theme.device.mobileL } {
+        width: 345px;
+        height: 390px;
+        margin-top: -115px;
+        margin-left: -57px;
+    }
+`;
+const HeroIMGStyled = styled(HeroIMG)`
+    @media ${ theme.device.mobileL } {
+        width: 320px;
+        margin-top: 250px;
+    }
 `;
 
 class HeroTemplate extends React.Component {
@@ -115,7 +143,7 @@ class HeroTemplate extends React.Component {
                             order: 'first'
                             }}
                         >
-                            <HeroIMG />
+                            <HeroIMGStyled />
                         </ColRight>
                     </Row>
                     <HeroSocialMediaBar />
