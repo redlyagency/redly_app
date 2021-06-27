@@ -11,11 +11,22 @@ const WrapperDIVLink = styled.div`
         margin-left: 10px;
         transition: 0.1s ease-in-out;
     }
+    :hover > .df34ferfvbvdffe {
+        right: 15px;
+        transition: 0.1s ease-in-out;
+    }
     :hover .circleSwap {
         transition: 0.2s ease-in-out;
         width: 100%;
         height: 45px;
         border-radius: 100px;
+
+        @media ${ theme.device.laptop } {
+            height: 40px;
+        }
+        @media ${ theme.device.tablet } {
+            height: 35px;
+        }
     }
 `;
 const CircleDecoration = styled.div`
@@ -28,6 +39,15 @@ const CircleDecoration = styled.div`
     transition: 0.2s ease-in-out;
     position: absolute;
     z-index: 1;
+
+    @media ${ theme.device.laptop } {
+        height: 40px;
+        width: 40px;
+    }
+    @media ${ theme.device.tablet } {
+        height: 35px;
+        width: 35px;
+    }
 `;
 const PTitle = styled.p`
     color: ${ theme.colors.gray };
@@ -37,6 +57,17 @@ const PTitle = styled.p`
     z-index: 50;
     font-family: 'Poppins-SemiBold';
     text-transform: uppercase;
+    font-size: ${ theme.fontSize.DD_18_5 };
+
+    @media ${ theme.device.laptop } {
+        font-size: ${ theme.fontSize.DDD_18_5 };
+    }
+    @media ${ theme.device.tablet } {
+        font-size: ${ theme.fontSize.DDDD_18_5 };
+    }
+    @media ${ theme.device.mobileL } {
+        font-size: ${ theme.fontSize.MD_18_5 };
+    }
 `;
 const ArrowIconStyled = styled(ArrowIcon)`
     background-size: 100%;
@@ -54,12 +85,12 @@ const ArrowIconStyled = styled(ArrowIcon)`
 class MainButton extends React.Component {
     render() {
         return (
-            <WrapperDIVLink style={this.props.style}>
-                <CircleDecoration className="circleSwap" style={this.props.styleCircle} />
-                <PTitle style={this.props.styleText}>
-                    {this.props.name}
+            <WrapperDIVLink style={ this.props.style }>
+                <CircleDecoration className="circleSwap" style={ this.props.styleCircle } />
+                <PTitle style={ this.props.styleText }>
+                    { this.props.name }
                 </PTitle>
-                <ArrowIconStyled />
+                <ArrowIconStyled className="df34ferfvbvdffe" />
             </WrapperDIVLink>
         )
     }

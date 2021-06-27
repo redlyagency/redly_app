@@ -18,6 +18,32 @@ const ContentParagraph = styled.h2`
     font-family: 'Poppins-SemiBold';
     color: ${ theme.colors.gray };
     width: 60%;
+
+    @media ${ theme.device.laptop } {
+        width: 100%;
+    }
+`;
+const BtnWrapperMediaClass = styled.div`
+    width: 20%;
+    margin-top: 30px;
+
+    @media ${ theme.device.laptop } {
+        width: 22%;
+        margin-top: 25px;
+    }
+    @media ${ theme.device.tablet } {
+        width: 28%;
+        margin-top: 15px;
+    }
+    @media ${ theme.device.mobileL } {
+        width: 55%;
+    }
+    @media ${ theme.device.mobileM } {
+        width: 55%;
+    }
+    @media ${ theme.device.mobileS } {
+        width: 70%;
+    }
 `;
 
 class AboutTemplate extends React.Component {
@@ -29,9 +55,13 @@ class AboutTemplate extends React.Component {
                     <ContentParagraph>
                         { content.About.AboutContent }
                     </ContentParagraph>
-                    <NavLink to="/about" activeClassName="active">
-                        <WorksBtn style={{ marginTop: '20px', width: '17%' }} name={ btnPackage.MainBtn.ReadMore } />
-                    </NavLink>
+                    <BtnWrapperMediaClass>
+                        <NavLink to="/about" activeClassName="active">
+                            <WorksBtn
+                                name={ btnPackage.MainBtn.ReadMore }
+                            />
+                        </NavLink>
+                    </BtnWrapperMediaClass>
                 </AboutWrapper>
             </>
         );

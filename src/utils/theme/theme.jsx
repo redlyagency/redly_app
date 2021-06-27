@@ -16,6 +16,8 @@ export const fontSize = {
     DC_18: '18px',
     DCC_18: '17px',
     DD_18_5: '18.5px',
+    DDD_18_5: '17px',
+    DDDD_18_5: '15px',
     DE_35: '35px',
     DF_47: '47px',
     DFF_47: '40px',
@@ -24,6 +26,7 @@ export const fontSize = {
     DGG_58: '52px',
     //mobile version
     MB_17: '17px',
+    MD_18_5: '14px',
     MF_47: '36px',
     MFF_47: '30px',
 }
@@ -33,7 +36,7 @@ const margin = {
     
 }
 const size = {
-    mobileS: '320px',
+    mobileS: '350px',
     mobileM: '375px',
     mobileL: '767px',
     tablet: '991px',

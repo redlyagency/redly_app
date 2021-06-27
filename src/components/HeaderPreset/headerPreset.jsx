@@ -10,6 +10,10 @@ const HeaderH1 = styled.h1`
     font-size: ${ theme.fontSize.DF_47 };
     font-family: 'Poppins-SemiBold';
     display: inline-block;
+
+    @media ${ theme.device.tablet } {
+        font-size: ${ theme.fontSize.MF_47 };
+    }
 `;
 const HeaderUnderscore = styled.div`
     width: 80px;

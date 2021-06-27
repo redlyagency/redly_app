@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { theme } from '../../utils/theme/theme';
 
 import FacebookSvg from '../../assets/svg/Icons/Facebook';
 import InstagramSvg from '../../assets/svg/Icons/Instagram';
@@ -9,8 +10,12 @@ import BehanceSvg from '../../assets/svg/Icons/Behance';
 
 const FooterSocialBarWrapper = styled.div`
     display: inline-block;
-    margin-left: 30px;
     margin-top: 0;
+
+    @media ${ theme.device.mobileL } {
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
 `;
 const FacebookSvgStyled = styled(FacebookSvg)`
     width: 11px;

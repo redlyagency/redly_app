@@ -109,6 +109,28 @@ const HeroIMGStyled = styled(HeroIMG)`
         margin-top: 0;
     }
 `;
+const BtnWrapperMediaClass = styled.div`
+    width: 46%;
+    margin-top: 30px;
+
+    @media ${ theme.device.laptop } {
+        width: 50%;
+        margin-top: 25px;
+    }
+    @media ${ theme.device.tablet } {
+        width: 65%;
+        margin-top: 15px;
+    }
+    @media ${ theme.device.mobileL } {
+        width: 55%;
+    }
+    @media ${ theme.device.mobileM } {
+        width: 65%;
+    }
+    @media ${ theme.device.mobileS } {
+        width: 70%;
+    }
+`;
 
 class HeroTemplate extends React.Component {
     render() {
@@ -137,15 +159,13 @@ class HeroTemplate extends React.Component {
                                     <HeroUnderTitleHero>
                                         { content.Hero.HeroUnderTitle }
                                     </HeroUnderTitleHero>
-                                    <NavLink to="/works" activeClassName="active">
-                                        <WorksBtn
-                                            style={{
-                                                marginTop: '30px',
-                                                width: '50%'
-                                            }}
-                                            name={ btnPackage.MainBtn.SeeOurWorks }
-                                        />
-                                    </NavLink>
+                                    <BtnWrapperMediaClass>
+                                        <NavLink to="/works" activeClassName="active">
+                                            <WorksBtn
+                                                name={ btnPackage.MainBtn.SeeOurWorks }
+                                            />
+                                        </NavLink>
+                                    </BtnWrapperMediaClass>
                                 </ColLeft>
                                 <HeroSocialMediaBar />
                             </Row>

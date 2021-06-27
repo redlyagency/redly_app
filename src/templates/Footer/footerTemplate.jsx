@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { content } from '../../utils/data/mainPageData';
 import { theme } from '../../utils/theme/theme';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import { btnPackage } from '../../utils/data/btnPageData';
 
 import BtnGetInTouch from '../../components/Buttons/mainBtn';
@@ -86,20 +86,36 @@ const FooterFooterSection = styled.div`
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    width: 26.5%;
+
+    @media ${ theme.device.laptop } {
+        width: 36.5%;
+    }
+    @media ${ theme.device.tablet } {
+        width: 100%;
+    }
+    @media ${ theme.device.mobileL } {
+        width: 100%;
+    }
 `;
 const FooterTitle = styled.p`
     font-family: 'Poppins-Light';
     font-size: ${ theme.fontSize.DA_15 };
     display: inline-block;
+
+    @media ${ theme.device.mobileL } {
+        width: 100%;
+        text-align: center;
+    }
 `;
 const SingleFooterLine = styled.div`
     background-color: ${ theme.colors.gray };
     height: 25px;
     width: 1px;
-    
-    position: absolute;
-    display: inline-block;
-    margin-left: 15px;
+
+    @media ${ theme.device.mobileL } {
+        display: none;
+    }
 `;
 
 class FooterTemplate extends React.Component {
@@ -118,19 +134,54 @@ class FooterTemplate extends React.Component {
                         </FooterBigTitle>
                         <BtnContainer>
                             <BtnGetInTouch
-                            name={ btnPackage.MainBtn.GetInTouch }
-                            style={{ width: '100%', marginTop: '50px'}}
-                            styleCircle={{ backgroundColor: '#4A4A4A' }}
-                            styleText={{fontSize: '18.5px', fontFamily: 'Poppins-SemiBold', color: 'white' }}
+                                name={ btnPackage.MainBtn.GetInTouch }
+                                style={{
+                                    width: '100%',
+                                    marginTop: '50px'
+                                }}
+                                styleCircle={{
+                                    backgroundColor: '#4A4A4A'
+                                }}
+                                styleText={{
+                                    fontSize: '18.5px',
+                                    fontFamily: 'Poppins-SemiBold',
+                                    color: 'white'
+                                }}
                             />
                         </BtnContainer>
                     </FooterTitleWrapper>
                     <FooterFooterSection>
-                        <FooterTitle>
-                            { content.Footer.FooterFooterTitle }
-                        </FooterTitle>
-                        <SingleFooterLine />
-                        <FooterSocialMediaBar />
+                        <Container>
+                            <Row className="justify-content-center">
+                                <Col
+                                    md={{
+                                        span: 5,
+                                        order: 'first'
+                                    }}
+                                    xs={{
+                                        span: 12,
+                                        order: 'last'
+                                    }}
+                                >
+                                    <FooterTitle>
+                                        { content.Footer.FooterFooterTitle }
+                                    </FooterTitle>
+                                </Col>
+                                    <SingleFooterLine />
+                                <Col
+                                    md={{
+                                        span: 5,
+                                        order: 'last'
+                                    }}
+                                    xs={{
+                                        span: 12,
+                                        order: 'first'
+                                    }}
+                                >
+                                    <FooterSocialMediaBar />
+                                </Col>
+                            </Row>
+                        </Container>
                     </FooterFooterSection>
                 </Container>
             </FooterWrapper>
