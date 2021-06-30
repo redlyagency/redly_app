@@ -6,7 +6,3 @@ export const NotFound = {
     ErrorContent: "The page you are looking for doesn't exist",
     //The content of a button on a hero website.
 }
-
-export const content = {
-    NotFound //All paragraph elements for 404 error website section.
-};

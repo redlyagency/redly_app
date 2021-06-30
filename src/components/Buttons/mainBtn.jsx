@@ -85,12 +85,22 @@ const ArrowIconStyled = styled(ArrowIcon)`
 class MainButton extends React.Component {
     render() {
         return (
-            <WrapperDIVLink style={ this.props.style }>
-                <CircleDecoration className="circleSwap" style={ this.props.styleCircle } />
-                <PTitle style={ this.props.styleText }>
+            <WrapperDIVLink
+                style={ this.props.style }
+            >
+                <CircleDecoration
+                    className="circleSwap"
+                    style={ this.props.styleCircle }
+                />
+                <PTitle
+                    style={ this.props.styleText }
+                >
                     { this.props.name }
                 </PTitle>
-                <ArrowIconStyled className="df34ferfvbvdffe" />
+                <ArrowIconStyled
+                    className="df34ferfvbvdffe"
+                    style={ this.props.styleArrow }
+                />
             </WrapperDIVLink>
         )
     }

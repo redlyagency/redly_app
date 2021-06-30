@@ -56,6 +56,39 @@ export const postContent = [
         imagePosition: 'center',
         imageSize: '100%'
     },
+    {
+        number: '04',
+        name: "Bake'sell",
+        category: postCategory.advertisment,
+        dateOfRelease: `08 ${ month.january } 2021`,
+        gradient: 'linear-gradient(90deg, #FC81F5, #9C76F8 )',
+        link: '/works',
+        image: `url( ${ imageBakesell } )`,
+        imagePosition: 'center',
+        imageSize: '100%'
+    },
+    {
+        number: '05',
+        name: 'Virap',
+        category: postCategory.website,
+        dateOfRelease: `27 ${ month.april } 2021`,
+        gradient: 'linear-gradient(90deg, #404040, #9C9C9C)',
+        link: '/works',
+        image: `url( ${ imageVirap } )`,
+        imagePosition: 'center bottom',
+        imageSize: '100%'
+    },
+    {
+        number: '06',
+        name: 'Rentbuild',
+        category: postCategory.uiux,
+        dateOfRelease: `12 ${ month.may } 2021`,
+        gradient: 'linear-gradient(90deg, #4051AD, #57B5F9)',
+        link: '/works',
+        image: `url( ${ imageRentbuild } )`,
+        imagePosition: 'center',
+        imageSize: '100%'
+    },
 ]
 
 export default postContent;

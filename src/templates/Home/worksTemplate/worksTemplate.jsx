@@ -8,7 +8,7 @@ import { btnPackage } from '../../../utils/data/btnPageData';
 
 import ScrollUpBtn from '../../../components/Buttons/scrollTopBtn';
 import HeaderPreset from '../../../components/HeaderPreset/headerPreset';
-import PreWorksGallery from '../../../components/PreWorksGallery/customizableGalleryComponent';
+import PreWorksGallery from '../../../components/PreWorksGallery/PREcustomizableGalleryComponent';
 import BiggerBtn from '../../../components/Buttons/biggerBtn';
 
 const ContentParagraph = styled.div`

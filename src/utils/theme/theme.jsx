@@ -24,6 +24,7 @@ export const fontSize = {
     DFFF_47: '29px',
     DG_58: '58px',
     DGG_58: '52px',
+    DH_138: '138px',
     //mobile version
     MB_17: '17px',
     MBB_17: '14px',
