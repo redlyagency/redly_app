@@ -8,7 +8,7 @@ import { btnPackage } from '../../utils/data/btnPageData';
 
 import HeaderPreset from '../../components/HeaderPreset/headerPreset';
 import OurPostList from '../../components/WorksGallery/customizableGalleryComponent';
-import UnderListUnderHeaderButton from '../../components/Buttons/mainBtn';
+import UnderListUnderHeaderButton from '../../components/Buttons/ReversemainBtn';
 
 const WorksWrapper = styled(Container)`
 
@@ -31,7 +31,7 @@ const UnderListUnderHeader = styled.h6`
     color: ${ theme.colors.gray };
 `;
 const UnderListUnderHeaderButtonWrapper = styled.div`
-    margin-top: 25px;
+    margin: 25px 0 0 20px;
     padding-bottom: 50px;
 `;
 
@@ -61,7 +61,10 @@ class WorksTemplate extends React.Component {
                                 width: '175px',
                             }}
                             styleCircle={{
-                                right: '0'
+                                right: '20px'
+                            }}
+                            styleArrow={{
+                                transform: 'translateY(-50%) rotate(180deg)',
                             }}
                             name={ btnPackage.MainBtn.GoBack }
                         />

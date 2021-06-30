@@ -9,7 +9,7 @@ import { NavLink } from 'react-router-dom';
 import HeroIMG from '../../assets/svg/HeroMainPic';
 import HeroElipse from '../../assets/svg/HeroElipse';
 
-import WorksBtn from '../../components/Buttons/mainBtn';
+import WorksBtn from '../../components/Buttons/ReversemainBtn';
 
 const BodyWrapperHome = styled(Container)`
     position: absolute;
@@ -147,7 +147,7 @@ const ErrorUnderTitle2 = styled.h2`
     margin-top: -20px;
 `;
 
-class HeroTemplate extends React.Component {
+class ErrorTemplate extends React.Component {
     render() {
         return (
             <>
@@ -188,6 +188,9 @@ class HeroTemplate extends React.Component {
                                                 styleArrow={{
                                                     transform: 'translateY(-50%) rotate(180deg)',
                                                 }}
+                                                styleCircle={{
+                                                    right: '20px'
+                                                }}
                                                 style={{
                                                     width: '180px'
                                                 }}
@@ -223,4 +226,4 @@ class HeroTemplate extends React.Component {
     }
 }
 
-export default HeroTemplate;
+export default ErrorTemplate;
