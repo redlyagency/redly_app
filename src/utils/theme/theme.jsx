@@ -26,9 +26,15 @@ export const fontSize = {
     DGG_58: '52px',
     //mobile version
     MB_17: '17px',
+    MBB_17: '14px',
+    MBBB_17: '12px',
+    MC_18: '17px',
     MD_18_5: '14px',
+    ME_35: '20px',
     MF_47: '36px',
     MFF_47: '30px',
+    MFFF_47: '25px',
+    MG_58: '34px',
 }
 const margin = {
     default: '20%',
@@ -38,6 +44,8 @@ const margin = {
 const size = {
     mobileS: '350px',
     mobileM: '375px',
+    mobileMscalePlus: '450px',
+    mobileMscale: '575px',
     mobileL: '767px',
     tablet: '991px',
     laptop: '1199px',
@@ -48,6 +56,8 @@ const size = {
 export const device = {
     mobileS: `(max-width: ${size.mobileS})`,
     mobileM: `(max-width: ${size.mobileM})`,
+    mobileMscalePlus: `(max-width: ${size.mobileMscalePlus})`,
+    mobileMscale: `(max-width: ${size.mobileMscale})`,
     mobileL: `(max-width: ${size.mobileL})`,
     tablet: `(max-width: ${size.tablet})`,
     laptop: `(max-width: ${size.laptop})`,

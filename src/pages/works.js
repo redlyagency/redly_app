@@ -1,33 +1,51 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import BackButton from '../components/Buttons/backbutton';
+import styled from 'styled-components';
 
-class List extends React.Component {
+import HeroTemplate from '../templates/Home/heroTemplate/heroTemplate';
+import AboutTemplate from '../templates/Home/aboutTemplate/aboutTemplate';
+import WorksTemplate from '../templates/Home/worksTemplate/worksTemplate';
+import FooterTemplate from '../templates/Footer/footerTemplate'
+
+import { theme } from '../utils/theme/theme';
+
+const HeroWrapper = styled.div`
+    //background-color: green;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    position: relative;
+    
+    @media ${ theme.device.browserzoom } {
+        height: 1080px;
+        min-height: auto;
+    }
+`;
+const AboutWrapper = styled.div`
+    position: relative;
+    background-color: white;
+`;
+const WorksWrapper = styled.div`
+    position: relative;
+    background-color: transparent;
+`;
+const FooterWrapper = styled.div`
+    position: relative;
+    background-color: ${ theme.colors.darkergray };
+    height: 500px;
+`;
+
+class Works extends React.Component {
     render() {
         return (
-          <div className="page-test-item-test">
-            <div>
-                <p>That is a works page</p>
-                <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/works">Works</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+            <>
 
-                <BackButton />
-            </div>
-            </div>
+                <FooterWrapper>
+                    <FooterTemplate />
+                </FooterWrapper>
+            </>
         );
     }
 }
 
-export default List;
+export default Works;

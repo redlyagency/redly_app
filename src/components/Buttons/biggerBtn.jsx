@@ -5,7 +5,7 @@ import { theme } from '../../utils/theme/theme';
 import ArrowIcon from '../../assets/svg/ArrowIcon';
 
 const BtnWrapper = styled.div`
-    width: 500px;
+    width: auto;
     :hover {
         margin-left: 10px;
     }
@@ -20,13 +20,30 @@ const ArrowIconStyled = styled(ArrowIcon)`
     transform: translateY(-50%);
     z-index: 200;
     margin-left: 20px;
+
+    @media ${ theme.device.tablet } {
+        width: 45px;
+        height: 20px;
+        margin-top: 8px;
+    }
+    @media ${ theme.device.mobileL } {
+        width: 40px;
+        height: 15px;
+        margin-left: 15px;
+    }
 `;
 const H1BtnName = styled.h1`
     font-size: ${ theme.fontSize.DF_47 };
     color: ${ theme.colors.black };
     font-family: 'Poppins-SemiBold';
-
     display: inline-block;
+
+    @media ${ theme.device.tablet } {
+        font-size: ${ theme.fontSize.DFF_47 };
+    }
+    @media ${ theme.device.mobileL } {
+        font-size: ${ theme.fontSize.MFF_47 };
+    }
 `;
 class BiggerBtn extends React.Component {
     render() {

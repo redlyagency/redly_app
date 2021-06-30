@@ -12,6 +12,7 @@ import HeroElipse from '../../../assets/svg/HeroElipse';
 import WorksBtn from '../../../components/Buttons/mainBtn';
 import HeroSocialMediaBar from '../../../components/HeroSocialMedia/heroSocialMedia';
 import ScrollDownBtn from '../../../components/Buttons/scrollDownBtn';
+import AboutMobileMouseScroll from '../../../components/Buttons/mobileScrollMouse';
 
 const BodyWrapperHome = styled(Container)`
     position: absolute;
@@ -190,6 +191,7 @@ class HeroTemplate extends React.Component {
                         </ColRight>
                     </Row>
                 </BodyWrapperHome>
+                <AboutMobileMouseScroll />
                 <ScrollDownBtn />
             </>
         );

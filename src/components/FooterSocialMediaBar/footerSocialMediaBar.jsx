@@ -9,59 +9,85 @@ import LinkedInSvg from '../../assets/svg/Icons/Linkedin';
 import BehanceSvg from '../../assets/svg/Icons/Behance';
 
 const FooterSocialBarWrapper = styled.div`
-    display: inline-block;
-    margin-top: 0;
+    margin-top: -1px;
 
     @media ${ theme.device.mobileL } {
         margin-left: 50%;
         transform: translateX(-50%);
+        width: 185px;
     }
 `;
 const FacebookSvgStyled = styled(FacebookSvg)`
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 13px;
     margin-left: 0;
     display: inline-block;
+
+    @media ${ theme.device.mobileL } {
+        width: 20px;
+        height: 20px;
+    }
 
     :hover {
         transform: scale(1.5);
     }
 `;
 const InstagramSvgStyled = styled(InstagramSvg)`
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 13px;
     margin-left: 20px;
     display: inline-block;
+
+    @media ${ theme.device.mobileL } {
+        width: 20px;
+        height: 20px;
+    }
 
     :hover {
         transform: scale(1.5);
     }
 `;
 const GithubSvgStyled = styled(GithubSvg)`
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 13px;
     margin-left: 20px;
     display: inline-block;
+
+    @media ${ theme.device.mobileL } {
+        width: 20px;
+        height: 20px;
+    }
 
     :hover {
         transform: scale(1.5);
     }
 `;
 const LinkedInSvgStyled = styled(LinkedInSvg)`
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 13px;
     margin-left: 20px;
     display: inline-block;
+
+    @media ${ theme.device.mobileL } {
+        width: 20px;
+        height: 20px;
+    }
 
     :hover {
         transform: scale(1.5);
     }
 `;
 const BehanceSvgStyled = styled(BehanceSvg)`
-    width: 15px;
-    height: 10px;
+    width: 18px;
+    height: 12px;
     margin-left: 20px;
     display: inline-block;
+
+    @media ${ theme.device.mobileL } {
+        width: 25px;
+        height: 20px;
+        margin-top: 3px;
+    }
 
     :hover {
         transform: scale(1.5);
