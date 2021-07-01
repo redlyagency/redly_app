@@ -16,6 +16,7 @@ import Contact from './pages/contact';
 import NotFound from './pages/404';
 
 import Navbar from './templates/Navbar/navbar';
+import ScrollToTop from './components/Scripts/scrollToTop';
 
 import { theme } from './utils/theme/theme';
 
@@ -52,6 +53,7 @@ function App({ location }) {
       <GlobalStyle />
       <AppWrapper>
         <Router>
+          <ScrollToTop />
           <Navbar />
           <Route render={({location}) => (
             <TransitionGroup>

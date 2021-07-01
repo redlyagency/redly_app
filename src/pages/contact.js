@@ -1,30 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-//import BackButton from '../components/Buttons/backbutton';
+import styled from 'styled-components';
+
+import ContactTemplate from '../templates/Contact/contactTemplate';
+
+import { theme } from '../utils/theme/theme';
+
+const ContactWrapper = styled.div`
+    //background-color: green;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    position: relative;
+    
+    @media ${ theme.device.browserzoom } {
+        height: 1080px;
+        min-height: auto;
+    }
+`;
 
 class List extends React.Component {
     render() {
         return (
-          <div className="page-test-item-test">
             <div>
-                <p>That is a contact page</p>
-                <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/works">Works</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-
-      
-            </div>
+                <ContactWrapper>
+                    <ContactTemplate />
+                </ContactWrapper>
             </div>
         );
     }
