@@ -13,6 +13,7 @@ import {
 import { Contact } from '../../utils/data/contactPageData';
 
 import ContactHeader from '../../components/HeaderPreset/headerPreset';
+import TransparentFooter from '../../templates/Footer/transparentFooterTemplate';
 
 class ContactTemplate extends React.Component {
     render() {
@@ -33,6 +34,11 @@ class ContactTemplate extends React.Component {
                     <ContactFormStyled />
                     <CirclesDecorationContentStyled />
                 </ContactFormWrapper>
+                <TransparentFooter
+                    style={{
+                        filter: 'invert(0.7)'
+                    }}
+                />
             </ContactWrapper>
         )
     }

@@ -29,6 +29,9 @@ const GlobalStyle = createGlobalStyle`
     -o-user-select: none;
     user-select: none;
     transition: 0.5s;
+    ::selection {
+      background-color: #00000022;
+    }
   }
     #root {margin: 0;padding: 0;}
     ::-webkit-scrollbar {width: 5px;} 

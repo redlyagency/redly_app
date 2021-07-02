@@ -14,36 +14,36 @@ import {
     
 } from './navbar.style';
 
-import NavbarMobileIcon from '../../components/Navbar/nav-mobile-icon';
+import NavbarMobileIcon from '../../components/MobileNavSystemMenu/MobileNavSystemMenu';
 
 function NavbarMain() {
 
-    const [navbar, setNavbar] = useState("navbar");
-  
+    const [navbar, setNavbar] = useState("navbarstart");
+
     const listenScrollEvent = event => {
-      if (window.scrollY < 73) {
-        return setNavbar("navbar");
-      } else if (window.scrollY > 70) {
-        return setNavbar("navbar2");
-      }
+        if (window.scrollY < 73) {
+            return setNavbar("navbarstart");
+        } else if (window.scrollY > 70) {
+        return setNavbar("navbarbegin");
+        }
     };
-  
+
     useEffect(() => {
-      window.addEventListener("scroll", listenScrollEvent);
-  
-      return () => window.removeEventListener("scroll", listenScrollEvent);
+        window.addEventListener("scroll", listenScrollEvent);
+
+        return () => window.removeEventListener("scroll", listenScrollEvent);
     }, []);
-  
+
     return (
         <>
-            <CVDEdfvdfg className={navbar}>
+            <CVDEdfvdfg id="navbar" className={navbar}>
                 <NavbarModificated className="container-fluid navbar-expand-lg navbar" collapseOnSelect expand="lg" bg="transparent" variant="dark">
                     <NavLink to="/">
                         <Navbar.Brand>
                             <NavLogo />
                         </Navbar.Brand>
                     </NavLink>
-                    <NavBarIconMobileControl aria-controls="responsive-navbar-nav">
+                    <NavBarIconMobileControl>
                         <NavbarMobileIcon />
                     </NavBarIconMobileControl>
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -76,6 +76,6 @@ function NavbarMain() {
             </CVDEdfvdfg>
         </>
     );
-  }
-  
-  export default NavbarMain;
+}
+
+export default NavbarMain;

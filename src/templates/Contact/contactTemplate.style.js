@@ -23,7 +23,7 @@ export const ContactUnderHeader = styled.h2`
     font-size: ${ theme.fontSize.DB_17 };
     width: 75%;
     position: relative;
-    z-index: 20;
+    z-index: 500;
 `;
 export const CirclesDecorationHeaderStyled = styled(CirclesDecorationHeader)`
     position: absolute;
@@ -33,7 +33,10 @@ export const CirclesDecorationHeaderStyled = styled(CirclesDecorationHeader)`
     z-index: 1;
 `;
 export const CirclesDecorationContentStyled = styled(CirclesDecorationContent)`
-    display: none;
+    position: absolute;
+    height: 550px;
+    top: -125px;
+    right: -50px;
 `;
 export const ContactFormWrapper = styled.div`
     position: relative;

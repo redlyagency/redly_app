@@ -1,11 +1,11 @@
 export const Navbar = {
-    home: 'Home',
+    home: 'home',
     //Home button.
-    about: 'About',
+    about: 'about',
     //About button.
-    works: 'Works',
+    works: 'works',
     //Works button.
-    contact: 'Contact'
+    contact: 'contact'
     //Contact button.
 }
 export const Hero = {

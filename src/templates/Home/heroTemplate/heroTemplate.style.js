@@ -85,6 +85,12 @@ export const HeroElipseStyled = styled(HeroElipse)`
         top: 0;
         transform: translate(-50%, 0);
     }
+    @media ${ theme.device.VerticalHeight } {
+        height: 340px;
+    }
+    @media ${ theme.device.VerticalHeightPlus } {
+        height: 300px;
+    }
 `;
 export const HeroIMGStyled = styled(HeroIMG)`
     height: 550px;
@@ -99,6 +105,12 @@ export const HeroIMGStyled = styled(HeroIMG)`
         width: 320px;
         height: 400px;
         margin-top: 0;
+    }
+    @media ${ theme.device.VerticalHeight } {
+        height: 340px;
+    }
+    @media ${ theme.device.VerticalHeightPlus } {
+        height: 300px;
     }
 `;
 export const BtnWrapperMediaClass = styled.div`

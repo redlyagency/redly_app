@@ -52,7 +52,9 @@ const size = {
     laptop: '1199px',
     laptopL: '1440px',
     desktop: '2560px',
-    browserviewportheight: '1100px'
+    browserviewportheight: '1100px',
+    lowScreenVerticalHeight: '745px',
+    lowScreenVerticalHeightPlus: '670px',
 }
 export const device = {
     mobileS: `(max-width: ${size.mobileS})`,
@@ -65,7 +67,9 @@ export const device = {
     laptopL: `(max-width: ${size.laptopL})`,
     desktop: `(max-width: ${size.desktop})`,
     desktopL: `(max-width: ${size.desktopL})`,
-    browserzoom: `(min-height: ${size.browserviewportheight})`
+    browserzoom: `(min-height: ${size.browserviewportheight})`,
+    VerticalHeight: `(max-height: ${size.lowScreenVerticalHeight})`,
+    VerticalHeightPlus: `(max-height: ${size.lowScreenVerticalHeightPlus})`,
 };
 
 export const theme = {

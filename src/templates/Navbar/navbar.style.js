@@ -32,11 +32,16 @@ export const NavLi = styled.li`
     float: left;
     padding-left: 50px;
 `;
-export const NavBarIconMobileControl = styled(Navbar.Toggle)`
+export const NavBarIconMobileControl = styled.div`
     border: none;
     background-color: transparent;
     height: 50px;
     width: 50px;
+    display: none;
+
+    @media ${ theme.device.tablet } {
+        display: unset;
+    }
 `;
 export const NavLinkA = styled(NavLink)`
     color: ${ theme.colors.black };
