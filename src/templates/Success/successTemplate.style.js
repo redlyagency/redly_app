@@ -64,3 +64,18 @@ export const ContactFormWrapper = styled.div`
 export const ContactFormStyled = styled(ContactForm)`
 
 `;
+export const MessageAlert = styled.div`
+    background-color: #EBF8EB;
+    opacity: 0.7;
+    padding: 20px;
+    margin-top: 125px;
+    width: 60%;
+    font-family: 'Poppins-Medium';
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media ${ theme.device.mobileL } {
+        width: 100%;
+    }
+`;

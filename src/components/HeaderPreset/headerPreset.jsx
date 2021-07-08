@@ -22,6 +22,11 @@ const HeaderUnderscore = styled.div`
     display: inline-block;
     margin-left: 30px;
     margin-bottom: 10px;
+
+    @media ${ theme.device.mobileL } {
+        width: 30px;
+        margin-left: 10px;
+    }
 `;
 
 class HeaderPreset extends React.Component {

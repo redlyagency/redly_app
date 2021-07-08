@@ -38,7 +38,7 @@ function NavbarMain() {
         <>
             <CVDEdfvdfg id="navbar" className={navbar}>
                 <NavbarModificated className="container-fluid navbar-expand-lg navbar" collapseOnSelect expand="lg" bg="transparent" variant="dark">
-                    <NavLink to="/">
+                    <NavLink to="/" activeClassName="noneClassName">
                         <Navbar.Brand>
                             <NavLogo />
                         </Navbar.Brand>

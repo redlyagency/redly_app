@@ -6,6 +6,13 @@ export const TransparentFooterTemplateWrapper = styled.div`
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
+
+    @media ${ theme.device.VerticalHeight } {
+        bottom: 0;
+    }
+    @media ${ theme.device.VerticalHeightPlus } {
+        display: none;
+    }
 `;
 export const FooterFooterContentCopyright = styled.p`
     margin-top: 25px;
@@ -15,4 +22,11 @@ export const FooterFooterContentCopyright = styled.p`
     font-family: 'Poppins-Light';
     font-size: ${ theme.fontSize.DA_15 };
     color: ${ theme.colors.white };
+
+    @media ${ theme.device.VerticalHeight } {
+        margin-top: 5px;
+    }
+    @media ${ theme.device.VerticalHeightPlus } {
+        display: none;
+    }
 `;

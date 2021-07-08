@@ -9,11 +9,12 @@ import {
   Switch
 } from 'react-router-dom';
 
-import Home from './pages/home';
-import About from './pages/about';
-import Works from './pages/works';
-import Contact from './pages/contact'; 
-import NotFound from './pages/404';
+import Home from './views/home';
+import About from './views/about';
+import Works from './views/works';
+import Contact from './views/contact'; 
+import NotFound from './views/404';
+import Success from './views/success';
 
 import Navbar from './templates/Navbar/navbar';
 import ScrollToTop from './components/Scripts/scrollToTop';
@@ -70,6 +71,7 @@ function App({ location }) {
                 <Route path="/about" component={ About } />
                 <Route path="/works" component={ Works } />
                 <Route path="/contact" component={ Contact } />
+                <Route path="/success" component={ Success } />
                 <Route path="*" component={ NotFound } />
               </Switch>
             </CSSTransition>

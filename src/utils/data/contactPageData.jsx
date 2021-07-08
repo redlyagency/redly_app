@@ -9,4 +9,8 @@ export const Contact = {
     ContactFormEmail: 'Email',
     ContactFormSubject: 'Subject',
     ContactFormMessage: 'Message',
+
+    AlertMessagesHeader: 'The message has been sent successfully!',
+    AlertMessages: 'Thank you for sending the message. Remember that we will contact you within 12 hours.',
+    //The alert messages used to inform user that contact form is approved in messages system.
 }
