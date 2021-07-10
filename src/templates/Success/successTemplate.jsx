@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import {
     ContactWrapper,
     ContactHeaderWrapperWrapper,
@@ -34,22 +35,27 @@ class ContactTemplate extends React.Component {
                     </MessageAlert>
                     <CirclesDecorationContentStyled />
                 </ContactFormWrapper>
-                <GoHomeBtn
-                    name={ btnPackage.MainBtn.GoHome }
-                    style={{
-                        width: '180px',
-                        margin: '50px 0 0 50%',
-                        transform: 'translateX(-50%)',
-                        position: 'relative',
-                        zIndex: '500',
-                    }}
-                    styleCircle={{
-                        right: '15px',
-                    }} 
-                    styleArrow={{
-                        transform: 'rotate(180deg) translateY(50%)',
-                    }}
-                />
+                <NavLink
+                    to="/"
+                    activeClassName="active12"
+                >
+                    <GoHomeBtn
+                        name={ btnPackage.MainBtn.GoHome }
+                        style={{
+                            width: '180px',
+                            margin: '50px 0 0 50%',
+                            transform: 'translateX(-50%)',
+                            position: 'relative',
+                            zIndex: '500',
+                        }}
+                        styleCircle={{
+                            right: '15px',
+                        }} 
+                        styleArrow={{
+                            transform: 'rotate(180deg) translateY(50%)',
+                        }}
+                    />
+                </NavLink>
                 <TransparentFooter
                     style={{
                         filter: 'invert(0.7)'
