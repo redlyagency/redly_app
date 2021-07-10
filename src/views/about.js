@@ -1,15 +1,33 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
-//import BackButton from '../components/Buttons/backbutton';
+import styled from 'styled-components';
+import { theme } from '../utils/theme/theme';
+import { Container } from 'react-bootstrap'
 
-class List extends React.Component {
+import AboutTemplate from '../templates/About/aboutTemplate';
+import FooterTemplate from '../templates/Footer/footerTemplate';
+
+const AboutWrapper = styled(Container)`
+
+`;
+const FooterWrapper = styled.div`
+    position: relative;
+    background-color: ${ theme.colors.darkergray };
+    height: 500px;
+`;
+
+class About extends React.Component {
     render() {
         return (
-          <div className="page-test-item-test">
-            about
-          </div>
+          <>
+            <AboutWrapper>
+              <AboutTemplate />
+            </AboutWrapper>
+            <FooterWrapper>
+              <FooterTemplate />
+            </FooterWrapper>
+          </>
         );
     }
 }
 
-export default List;
+export default About;

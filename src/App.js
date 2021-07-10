@@ -33,6 +33,9 @@ const GlobalStyle = createGlobalStyle`
     ::selection {
       background-color: #00000022;
     }
+    .BoldSpanCont {
+      font-family: 'Poppins-Bold';
+    }
   }
     #root {margin: 0;padding: 0;}
     ::-webkit-scrollbar {width: 5px;} 

@@ -1,5 +1,6 @@
 export const colors = {
     bg_gradient: 'linear-gradient(90deg, #FFFFFF, #E8E8E8)',
+    bg_gradientQuote: 'linear-gradient(75deg, #1C1C1C, #343434)',
     black: '#000000',
     white: '#FFFFFF',
     gray: '#5D5D5D',

@@ -4,13 +4,8 @@ import { theme } from '../../utils/theme/theme';
 import { SocialLinks } from '../../utils/data/socialLinks';
 
 const MediaWrapper = styled.div`
+    width: 100%;
     position: absolute;
-    left: 0;
-    bottom: -100px;
-
-    @media ${ theme.device.mobileL } {
-        display: none;
-    }
 `;
 const ULmedia = styled.ul`
     display: inline;
@@ -22,7 +17,7 @@ const LImedia = styled.li`
     position: relative;
 
     :nth-child(even) > a {
-        color: ${ theme.colors.gray };
+        color: ${ theme.colors.black };
         text-decoration: none !important;
     }
     :nth-child(even) > a:hover {
@@ -53,7 +48,7 @@ const LImedia = styled.li`
     }
 `;
 const Amedia = styled.a`
-    color: ${ theme.colors.gray };
+    color: ${ theme.colors.black };
     text-decoration: underline;
     font-family: 'Poppins-SemiBold';
     font-size: ${ theme.fontSize.DC_18 };
@@ -63,7 +58,7 @@ const Amedia = styled.a`
     }
 `;
 
-class HeroSocialMediaBar extends React.Component {
+class AboutSocialMediaBar extends React.Component {
     render() {
         const namesMedia = [
             {
@@ -83,7 +78,28 @@ class HeroSocialMediaBar extends React.Component {
             {
                 name: 'GitHub',
                 link: `${ SocialLinks.GitHub }`,
-            }
+            },
+            {
+                name: '/',
+            },
+            {
+                name: 'Facebook',
+                link: `${ SocialLinks.Facebook }`,
+            },
+            {
+                name: '/',
+            },
+            {
+                name: 'Twitter',
+                link: `${ SocialLinks.Twitter }`,
+            },
+            {
+                name: '/',
+            },
+            {
+                name: 'Linked In',
+                link: `${ SocialLinks.LinkedIn }`,
+            },
         ]
         return (
             <MediaWrapper>
@@ -103,4 +119,4 @@ class HeroSocialMediaBar extends React.Component {
     }
 }
 
-export default HeroSocialMediaBar;
+export default AboutSocialMediaBar;

@@ -1,4 +1,4 @@
-export const Navbar = {
+const Navbar = {
     home: 'home',
     //Home button.
     about: 'about',
@@ -8,19 +8,19 @@ export const Navbar = {
     contact: 'contact'
     //Contact button.
 }
-export const Hero = {
+const Hero = {
     HeroMainTitle: 'web development & graphic design.',
     //The title of a hero website section.
     HeroUnderTitle: 'Hello, our agency deals with creating websites and graphic design. We are able to make any project at a convenient price.',
     //The text under title of a hero webiste section.
 }
-export const About = {
+const About = {
     TitleAbout: 'About.',
     //The title of a About section.
     AboutContent: 'Hello, our agency deals with creating websites and graphic design. We are able to make any project at a convenient price. Hello, our agency deals with creating websites and graphic design. We are able to make any project at a convenient price.',
     //The content of a About section.
 }
-export const Works = {
+const Works = {
     TitleWorks: 'Works.',
     //The title of a Works section.
     WorksUnderTitle: 'Here you can find our latest works.',
@@ -28,7 +28,7 @@ export const Works = {
     ContentUnderGallery: 'Here you will find more of our work.',
     //the content under menu gallery.
 }
-export const Footer = {
+const Footer = {
     FooterTitle: "Let's work together.",
     //The title of a Footer section.
     FooterUnderTitle: 'We are available for freelance work.',
