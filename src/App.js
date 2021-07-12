@@ -2,7 +2,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
-import "animate.css/animate.min.css";
 import './fonts/fonts.css';
 import {
   BrowserRouter as Router,
@@ -19,7 +18,7 @@ import Success from './views/success';
 
 import Bakesell from './views/portfolio/bakesell';
 import Virap from './views/portfolio/virap';
-import Rentbuild from './views/portfolio/bakesell';
+import Rentbuild from './views/portfolio/rentbuild';
 
 import Navbar from './templates/Navbar/navbar';
 import ScrollToTop from './components/Scripts/scrollToTop';

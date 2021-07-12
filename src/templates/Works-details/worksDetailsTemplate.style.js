@@ -22,7 +22,7 @@ export const WorksDetailsWrapper = styled.div`
 `;
 export const ImgHeroPortfolioDetails = styled.div`
     background-image: url( ${ props => props.backgroundImageProps } );
-    background-position: center center;
+    background-position: ${ props => props.backgroundPositionProps };
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -48,7 +48,7 @@ export const TitleTextAll = styled.h1`
 
     ::after {
         content: '';
-        width: 60%;
+        width: 50%;
         height: 2.5px;
         background-color: black;
         position: absolute;
@@ -59,7 +59,7 @@ export const TitleTextAll = styled.h1`
     }
 `;
 export const BodyDetailsProjectWrapper = styled(Container)`
-    height: 2000px;
+
 `;
 export const AboutHeaderWrapper = styled.div`
     padding-top: 40px;
@@ -98,5 +98,42 @@ export const RowDetailsDetails = styled(Row)`
 
 `;
 export const EmptyFullColAbout = styled(Col)`
+    font-size: ${ theme.fontSize.DD_18_5 };
+    font-family: 'Poppins-Medium';
 
+    @media ${ theme.device.tablet } {
+        display: ${({isDisplayNone}) => isDisplayNone ? 'none' : 'unset'};
+    }
+`;
+export const GalleryGridWrapper = styled(Row)`
+    margin-top: 50px;
+`;
+export const GalleryGrid = styled(Col)`
+    margin-top: 20px;
+`;
+export const GalleryImgItem = styled.img`
+    background-size: cover;
+    width: 100%;
+
+    :hover {
+        transform: scale(1.025);
+    }
+`;
+export const UnderListUnderHeaderButtonWrapper = styled.div`
+    margin: 55px 0 0 20px;
+    padding-bottom: 55px;
+`;
+export const FontRowShowPresent = styled(Row)`
+
+`;
+export const ColFontShowPresent = styled(Col)`
+    color: ${ theme.colors.gray };
+    font-family: ${({isBigger}) => isBigger ? 'Poppins-Bold' : 'Poppins-Medium'};
+    font-size: ${({isBigger}) => isBigger ? '100px' : '18px'};
+`;
+export const RowColorsPresent = styled(Row)`
+
+`;
+export const ColPresentColor = styled(Col)`
+    margin: 5px;
 `;
