@@ -56,6 +56,8 @@ const size = {
     browserviewportheight: '1100px',
     lowScreenVerticalHeight: '745px',
     lowScreenVerticalHeightPlus: '670px',
+    lowScreenVerticalHeightSuperPlus: '495px',
+    lowScreenVerticalHeightSuperPlusEnd: '355px',
 }
 export const device = {
     mobileS: `(max-width: ${size.mobileS})`,
@@ -71,6 +73,8 @@ export const device = {
     browserzoom: `(min-height: ${size.browserviewportheight})`,
     VerticalHeight: `(max-height: ${size.lowScreenVerticalHeight})`,
     VerticalHeightPlus: `(max-height: ${size.lowScreenVerticalHeightPlus})`,
+    VerticalHeightSuperPlus: `(max-height: ${size.lowScreenVerticalHeightSuperPlus})`,
+    VerticalHeightSuperPlusEnd: `(max-height: ${size.lowScreenVerticalHeightSuperPlusEnd})`,
 };
 
 export const theme = {

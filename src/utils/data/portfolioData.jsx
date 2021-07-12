@@ -2,10 +2,22 @@ import imageBakesell from '../../assets/img/portfolioBannerBakesell.jpeg';
 import imageVirap from '../../assets/img/portfolioBannerVirap.jpg';
 import imageRentbuild from '../../assets/img/portfolioBannerRentbuild.jpeg';
 
-const postCategory = {
+export const postCategory = {
     uiux: 'UI/UX',
     website: 'Website',
     advertisment: 'Advertisment',
+}
+export const postPlatform = {
+    browser: 'Browser',
+}
+export const postDesigner = {
+    redly: 'Redly Team',
+}
+export const postTools = {
+    photoshop: 'Adobe Photoshop',
+    illustrator: 'Adobe Illustrator',
+    xd: 'Adobe XD',
+    afterEffects: 'Adobe After Effects',
 }
 const month = {
     january: 'January', //styczen
@@ -29,7 +41,7 @@ export const postContent = [
         category: postCategory.advertisment,
         dateOfRelease: `08 ${ month.january } 2021`,
         gradient: 'linear-gradient(90deg, #FC81F5, #9C76F8 )',
-        link: '/works',
+        link: '/bakesell',
         image: `url( ${ imageBakesell } )`,
         imagePosition: 'center',
         imageSize: '100%'
@@ -40,7 +52,7 @@ export const postContent = [
         category: postCategory.website,
         dateOfRelease: `27 ${ month.april } 2021`,
         gradient: 'linear-gradient(90deg, #404040, #9C9C9C)',
-        link: '/works',
+        link: '/virap',
         image: `url( ${ imageVirap } )`,
         imagePosition: 'center bottom',
         imageSize: '100%'
@@ -51,11 +63,9 @@ export const postContent = [
         category: postCategory.uiux,
         dateOfRelease: `12 ${ month.may } 2021`,
         gradient: 'linear-gradient(90deg, #4051AD, #57B5F9)',
-        link: '/works',
+        link: '/rentbuild',
         image: `url( ${ imageRentbuild } )`,
         imagePosition: 'center',
         imageSize: '100%'
     },
 ]
-
-export default postContent;

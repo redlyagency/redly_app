@@ -62,8 +62,14 @@ const ArrowStyledSVG = styled(ArrowSVG)`
 class scrollUpBtn extends React.Component {
     render() {
         return (
-            <Link to="topBtnTriggerHandle" offset={-250} smooth={true}>
-                <ButtonWrapperPosition>
+            <Link
+                to="topBtnTriggerHandle12"
+                offset={-5000}
+                smooth={true}
+            >
+                <ButtonWrapperPosition
+                    id="topBtnTriggerHandle12"
+                >
                     <ArrowStyledSVG />
                     <H1StyledScrollText>
                         { btnPackage.ArrowBtn.ScrollToTop }

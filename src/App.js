@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
+import "animate.css/animate.min.css";
 import './fonts/fonts.css';
 import {
   BrowserRouter as Router,
@@ -16,10 +17,17 @@ import Contact from './views/contact';
 import NotFound from './views/404';
 import Success from './views/success';
 
+import Bakesell from './views/portfolio/bakesell';
+import Virap from './views/portfolio/virap';
+import Rentbuild from './views/portfolio/bakesell';
+
 import Navbar from './templates/Navbar/navbar';
 import ScrollToTop from './components/Scripts/scrollToTop';
 
 import { theme } from './utils/theme/theme';
+
+//disable right click contex menu
+document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -39,8 +47,8 @@ const GlobalStyle = createGlobalStyle`
   }
     #root {margin: 0;padding: 0;}
     ::-webkit-scrollbar {width: 5px;} 
-    ::-webkit-scrollbar-track {background-color: white;}
-    ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.darkergray };}
+    ::-webkit-scrollbar-track {background-color: ${ theme.colors.gray };}
+    ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.black };}
   body {
     box-sizing: border-box;
     margin: 0; padding: 0;
@@ -75,6 +83,11 @@ function App({ location }) {
                 <Route path="/works" component={ Works } />
                 <Route path="/contact" component={ Contact } />
                 <Route path="/success" component={ Success } />
+                {/* Start Portfolio section - (Next version system i'll be updated) */}
+                <Route path="/bakesell" component={ Bakesell } />
+                <Route path="/virap" component={ Virap} />
+                <Route path="/rentbuild" component={ Rentbuild } />
+                {/* End Portfolio section - (Next version system i'll be updated) */}
                 <Route path="*" component={ NotFound } />
               </Switch>
             </CSSTransition>

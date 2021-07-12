@@ -109,9 +109,15 @@ export const LogoNavbarMobileStyled = styled(LogoNavbarMobile)`
 `;
 
 export const MobileNav = styled(Container)`
-    //background-color: red;
     margin-top: 85px;
     width: 100%;
+
+    @media ${ theme.device.VerticalHeightSuperPlus } {
+        box-shadow: inset 0 -10px 20px #0000003a;
+        width: 70%;
+        height: 200px;
+        overflow-y: scroll;
+    }
 `;
 export const MobileNavP = styled.p`
     //background-color: blue;

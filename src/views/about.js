@@ -7,12 +7,12 @@ import AboutTemplate from '../templates/About/aboutTemplate';
 import FooterTemplate from '../templates/Footer/footerTemplate';
 
 const AboutWrapper = styled(Container)`
-
+  
 `;
 const FooterWrapper = styled.div`
-    position: relative;
-    background-color: ${ theme.colors.darkergray };
-    height: 500px;
+  position: relative;
+  background-color: ${ theme.colors.darkergray };
+  height: 500px;
 `;
 
 class About extends React.Component {

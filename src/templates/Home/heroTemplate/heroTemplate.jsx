@@ -78,7 +78,9 @@ class HeroTemplate extends React.Component {
                     </Row>
                 </BodyWrapperHome>
                 <AboutMobileMouseScroll />
-                <ScrollDownBtn />
+                <ScrollDownBtn
+                    to="downBtnTriggerHandle"
+                />
             </>
         );
     }
