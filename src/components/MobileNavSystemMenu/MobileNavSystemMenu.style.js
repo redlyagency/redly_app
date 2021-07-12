@@ -111,16 +111,8 @@ export const LogoNavbarMobileStyled = styled(LogoNavbarMobile)`
 export const MobileNav = styled(Container)`
     margin-top: 85px;
     width: 100%;
-
-    @media ${ theme.device.VerticalHeightSuperPlus } {
-        box-shadow: inset 0 -10px 20px #0000003a;
-        width: 70%;
-        height: 200px;
-        overflow-y: scroll;
-    }
 `;
 export const MobileNavP = styled.p`
-    //background-color: blue;
     width: 100%;
     padding: 5px 100px 5px 100px;
     width: 100%;
@@ -130,6 +122,10 @@ export const MobileNavP = styled.p`
 
     @media ${ theme.device.mobileL } {
         padding: 5px 5px 5px 5px;
+    }
+    @media ${ theme.device.VerticalHeightSuperPlus } {
+        width: 25%;
+        padding: 20px 0 20px 0;
     }
 `;
 export const MobileNavLinkA = styled(NavLink)`

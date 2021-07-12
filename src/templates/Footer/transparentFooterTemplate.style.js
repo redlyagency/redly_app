@@ -10,9 +10,6 @@ export const TransparentFooterTemplateWrapper = styled.div`
     @media ${ theme.device.VerticalHeight } {
         bottom: 0;
     }
-    @media ${ theme.device.VerticalHeightSuperPlusEnd } {
-        display: none;
-    }
 `;
 export const FooterFooterContentCopyright = styled.p`
     margin-top: 25px;
@@ -25,8 +22,5 @@ export const FooterFooterContentCopyright = styled.p`
 
     @media ${ theme.device.VerticalHeight } {
         margin-top: 5px;
-    }
-    @media ${ theme.device.VerticalHeightSuperPlusEnd } {
-        display: none;
     }
 `;
