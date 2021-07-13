@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Logo from '../../assets/svg/Logo';
+import Logo from '../../assets/svg/Logo.jsx';
 import { theme } from '../../utils/theme/theme';
 import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
