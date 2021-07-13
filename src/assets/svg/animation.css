@@ -1,0 +1,18 @@
+.movingImage1 {
+    animation-name: movingImageAnim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform: translate(785px, 162px);
+}
+
+@keyframes movingImageAnim {
+    0% {
+        transform: translate(785px, 162px);
+    }
+    50% {
+        transform: translate(785px, 145px);
+    }
+    100% {
+        transform: translate(785px, 162px);
+    }
+}

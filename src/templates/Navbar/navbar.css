@@ -1,0 +1,235 @@
+#navbar {
+    top: 0;
+    transition: transform 0.2s ease;
+    z-index: 999999999999;
+}
+.navbarstart {
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+}
+.navbarbegin {
+    width: 1920px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.952);
+    animation-name: myanimation123;
+    animation-duration: 0.3s;
+}
+@media (max-width: 1920px) {
+    .navbarbegin {
+        width: 100%;
+    }
+}
+@keyframes myanimation123 {
+0% {
+    background-color: transparent;
+    color: transparent;
+}
+100% {
+    background-color: rgba(255, 255, 255, 0.945);
+}
+}
+.active {
+    font-family: 'Poppins-BoldItalic' !important;
+    text-decoration: none !important;
+    position: relative;
+}
+.active::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    top: 30px;
+    background-color: black;
+    animation-name: showin;
+    animation-duration: 0.2s;
+}
+.active1 {
+    font-family: 'Poppins-BoldItalic' !important;
+    text-decoration: none !important;
+    position: relative;
+    opacity: 0;
+}
+.active1::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 100%;
+    top: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    animation-name: showin;
+    animation-duration: 0.2s;
+    opacity: 0;
+}
+@keyframes showin {
+0% {
+    opacity: 0;
+    top: 0;
+}
+50% {
+    opacity: 0.1;
+    top: 15px;
+}
+100% {
+    opacity: 1;
+    top: 30px;
+}
+}
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* animation section */
+.page-test-item-test {
+    position: absolute;
+}
+
+.fade-enter,
+.fade-appear {
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-150px);
+}
+.fade-appear-active,
+.fade-enter.fade-ender-active {
+    opacity: 1;
+    transition: opacity 300ms linear 150ms;
+}
+.fade-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 150ms linear;
+}
+
+@media (max-width: 991px) {
+    #responsive-navbar-nav {
+        background-color: red;
+        height: 100vh;
+        width: 99vw;
+        padding: 0;
+        margin: 0;
+        position: sticky;
+        left: 0;
+        right: 0;
+    }
+}
+
+.homeActive {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 40;
+}
+.homeActive::after {
+    content: '01';
+    color: #484848;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Poppins-SemiBold';
+    font-size: 120px;
+    z-index: -1;
+    width: 100%;
+    line-height: 60%;
+    text-align: center;
+}
+.aboutActive {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 40;
+}
+.aboutActive::after {
+    content: '02';
+    color: #484848;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Poppins-SemiBold';
+    font-size: 120px;
+    z-index: -1;
+    width: 100%;
+    line-height: 60%;
+    text-align: center;
+}
+.worksActive {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 40;
+}
+.worksActive::after {
+    content: '03';
+    color: #484848;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Poppins-SemiBold';
+    font-size: 120px;
+    z-index: -1;
+    width: 100%;
+    line-height: 60%;
+    text-align: center;
+}
+.contactActive {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 40;
+}
+.contactActive::after {
+    content: '04';
+    color: #484848;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Poppins-SemiBold';
+    font-size: 120px;
+    z-index: -1;
+    width: 100%;
+    line-height: 60%;
+    text-align: center;
+}
+
+@media (max-height: 670px) {
+    .homeActive::after {
+        font-size: 80px;
+        line-height: 70%;
+    }
+    .aboutActive::after {
+        font-size: 80px;
+        line-height: 70%;
+    }
+    .worksActive::after {
+        font-size: 80px;
+        line-height: 70%;
+    }
+    .contactActive::after {
+        font-size: 80px;
+        line-height: 70%;
+    }
+}
+@media (max-height: 620px) {
+    .homeActive::after {
+        font-size: 60px;
+    }
+    .aboutActive::after {
+        font-size: 60px;
+    }
+    .worksActive::after {
+        font-size: 60px;
+    }
+    .contactActive::after {
+        font-size: 60px;
+    }
+}
