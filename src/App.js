@@ -1,3 +1,4 @@
+import React, { Suspense, lazy } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createGlobalStyle } from 'styled-components';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -8,13 +9,6 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-
-import Home from './views/home';
-import About from './views/about';
-import Works from './views/works';
-import Contact from './views/contact'; 
-import NotFound from './views/404';
-import Success from './views/success';
 
 import Bakesell from './views/portfolio/bakesell';
 import Virap from './views/portfolio/virap';
@@ -61,6 +55,13 @@ const AppWrapper = styled.div`
   position: relative;
 `;
 
+const Home = lazy(() => import('./views/home'));
+const About = lazy(() => import('./views/about'));
+const Works = lazy(() => import('./views/works'));
+const Contact = lazy(() => import('./views/contact')); 
+const NotFound =lazy(() => import('./views/404'));
+const Success = lazy(() => import('./views/success'));
+
 function App({ location }) {
   return (
     <>
@@ -71,26 +72,30 @@ function App({ location }) {
           <Navbar />
           <Route render={({location}) => (
             <TransitionGroup>
-            <CSSTransition
-              key={location.key}
-              timeout={ 300 }
-              classNames="fade"
-            >
-              <Switch location={location}>
-                <Route exact path="/" component={ Home } />
-                <Route path="/about" component={ About } />
-                <Route path="/works" component={ Works } />
-                <Route path="/contact" component={ Contact } />
-                <Route path="/success" component={ Success } />
-                {/* Start Portfolio section - (Next version system i'll be updated) */}
-                <Route path="/bakesell" component={ Bakesell } />
-                <Route path="/virap" component={ Virap} />
-                <Route path="/rentbuild" component={ Rentbuild } />
-                {/* End Portfolio section - (Next version system i'll be updated) */}
-                <Route path="*" component={ NotFound } />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
+              <CSSTransition
+                key={location.key}
+                timeout={ 300 }
+                classNames="fade"
+              >
+                <Suspense fallback={
+                  <div />
+                }>
+                  <Switch location={location}>
+                    <Route exact path="/" component={ Home } />
+                    <Route path="/about" component={ About } />
+                    <Route path="/works" component={ Works } />
+                    <Route path="/contact" component={ Contact } />
+                    <Route path="/success" component={ Success } />
+                    {/* Start Portfolio section - (Next version system i'll be updated) */}
+                    <Route path="/bakesell" component={ Bakesell } />
+                    <Route path="/virap" component={ Virap} />
+                    <Route path="/rentbuild" component={ Rentbuild } />
+                    {/* End Portfolio section - (Next version system i'll be updated) */}
+                    <Route path="*" component={ NotFound } />
+                  </Switch>
+                </Suspense>
+              </CSSTransition>
+            </TransitionGroup>
           )} />
         </Router>
       </AppWrapper>
