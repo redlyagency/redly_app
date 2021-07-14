@@ -7,7 +7,7 @@ import {
   NavWrapperOutline,
   CloseMenuMobileNavbar,
   CloseMenuMobileNavbarWrapper,
-  
+  LogoNavbarMobileStyled,
   MobileNav,
   MobileNavP,
   MobileNavLinkA,
@@ -26,7 +26,7 @@ const NavIconButton = ({ open, setOpen }) => {
 const Menu = ({ open, setOpen }) => {
     return (
       <StyledMenu open={open}>
-        
+        <LogoNavbarMobileStyled />
         <CloseMenuMobileNavbarWrapper>
           <CloseMenuMobileNavbar
           onClick={() => setOpen(!open)}

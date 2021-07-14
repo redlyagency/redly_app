@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import Logo from '../../assets/svg/Logo.svg';
 import { theme } from '../../utils/theme/theme';
 import { Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
@@ -8,7 +8,14 @@ export const NavbarModificated = styled(Navbar)`
     position: sticky;
     top: 0;
 `;
+export const NavLogo = styled(Logo)`
+    height: 40px;
+    margin: 0 0 0 ${ theme.margin.default };
 
+    @media ${ theme.device.tablet } {
+        margin: 0 0 0 ${ theme.margin.mobile };
+    }
+`;
 export const NavUl = styled.ul`
     margin: 0 ${ theme.margin.default } 0 0;
     padding: 0;
