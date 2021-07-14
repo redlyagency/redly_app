@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { theme } from "../../utils/theme/theme";
 
-import LogoNavbarMobile from '../../assets/svg/Logo';
+
 
 export const NavWrapperOutline = styled.div`
     width: 50px;
@@ -99,13 +99,6 @@ export const CloseMenuMobileNavbarWrapper = styled.div`
     position: absolute;
     right: 20px;
     top: 16px;
-`;
-export const LogoNavbarMobileStyled = styled(LogoNavbarMobile)`
-    height: 40px;
-    filter: invert(1);
-    position: absolute;
-    left: 20px;
-    top: 12px;
 `;
 
 export const MobileNav = styled(Container)`
