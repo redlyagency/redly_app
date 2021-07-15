@@ -80,6 +80,7 @@ const WithMaterialUI = () => {
     emailjs.sendForm('service_b7k3tk1', 'template_7cmiqyk', e.target, 'user_9ut3W3e5q1jESB8dzmLby')
       .then((result) => {
           console.log(result.text);
+          window.location.replace('/success');
       }, (error) => {
           console.log(error.text);
       });
