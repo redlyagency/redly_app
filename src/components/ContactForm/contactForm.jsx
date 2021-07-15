@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import { createMuiTheme, MuiThemeProvider ,TextField } from '@material-ui/core';
 import { btnPackage } from '../../utils/data/btnPageData';
 import { theme } from '../../utils/theme/theme';
-
+import emailjs from 'emailjs-com';
 
 import SubmitMainContactFormButton from '../Buttons/mainBtn';
 
@@ -15,6 +15,7 @@ const ContactFormWrapper = styled.div`
   width: 70%;
   margin-left: 50%;
   transform: translateX(-50%);
+  color: red;
 
   @media ${ theme.device.mobileL } {
     width: 100%;
@@ -68,13 +69,25 @@ const WithMaterialUI = () => {
 
   const THEME = createMuiTheme({
     typography: {
-      "fontFamily": "Poppins-SemiBold"
+      "fontFamily": "Poppins-SemiBold",
+      "color": "red"
     }
   });
+
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_b7k3tk1', 'template_7cmiqyk', e.target, 'user_9ut3W3e5q1jESB8dzmLby')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
   
   return (
     <MuiThemeProvider theme={THEME}>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={sendEmail}>
         <TextField
           fullWidth
           id="standard-basic"

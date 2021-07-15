@@ -38,10 +38,10 @@ const GlobalStyle = createGlobalStyle`
       font-family: 'Poppins-Bold';
     }
   }
-    #root {margin: 0;padding: 0;}
-    ::-webkit-scrollbar {width: 5px;} 
-    ::-webkit-scrollbar-track {background-color: ${ theme.colors.gray };}
-    ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.black };}
+  #root {margin: 0;padding: 0;}
+  ::-webkit-scrollbar {width: 5px;} 
+  ::-webkit-scrollbar-track {background-color: ${ theme.colors.gray };}
+  ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.black };}
   body {
     box-sizing: border-box;
     margin: 0; padding: 0;
