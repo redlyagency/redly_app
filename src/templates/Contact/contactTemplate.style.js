@@ -64,3 +64,8 @@ export const ContactFormWrapper = styled.div`
 export const ContactFormStyled = styled(ContactForm)`
 
 `;
+export const TransparentFooterWrapper = styled.div`
+    @media ${ theme.device.VerticalHeight } {
+        display: none;
+    }
+`;
