@@ -23,6 +23,13 @@ import { theme } from './utils/theme/theme';
 document.oncontextmenu = document.body.oncontextmenu = function() {return false;}
 
 const GlobalStyle = createGlobalStyle`
+  #standard-basic {
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;
+  }
   * {
     font-family: 'Poppins', sans-serif;
     -webkit-user-select: none;
@@ -31,12 +38,12 @@ const GlobalStyle = createGlobalStyle`
     -o-user-select: none;
     user-select: none;
     transition: 0.5s;
-    ::selection {
-      background-color: #00000022;
-    }
-    .BoldSpanCont {
-      font-family: 'Poppins-Bold';
-    }
+  }
+  ::selection {
+    background-color: #00000022;
+  }
+  .BoldSpanCont {
+    font-family: 'Poppins-Bold';
   }
   #root {margin: 0;padding: 0;}
   ::-webkit-scrollbar {width: 5px;} 

@@ -15,7 +15,6 @@ const ContactFormWrapper = styled.div`
   width: 70%;
   margin-left: 50%;
   transform: translateX(-50%);
-  color: red;
 
   @media ${ theme.device.mobileL } {
     width: 100%;
