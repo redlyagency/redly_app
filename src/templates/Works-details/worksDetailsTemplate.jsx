@@ -23,6 +23,7 @@ import {
     ColFontShowPresent,
     RowColorsPresent,
     ColPresentColor,
+    ASiteHref,
 } from './worksDetailsTemplate.style';
 import { StaticProjectDetailsData } from '../../utils/data/staticProjectDetailsData';
 import { btnPackage } from '../../utils/data/btnPageData';
@@ -172,6 +173,17 @@ class WorksDetails extends React.Component {
                                 <ColPresentColor />
                                 <ColPresentColor />
                             </RowColorsPresent>
+                        </EmptyFullColAbout>
+                    </RowDetailsDetails>
+                    <WorkListPreset
+                        name={ StaticProjectDetailsData.fourthHeader }
+                    />
+                    <RowDetailsDetails>
+                        <EmptyFullColAbout isDisplayNone/>
+                        <EmptyFullColAbout>
+                            <ASiteHref href={ this.props.WebsiteLink }>
+                                { this.props.WebsiteLinkName }
+                            </ASiteHref>
                         </EmptyFullColAbout>
                     </RowDetailsDetails>
                     <GalleryGridWrapper>

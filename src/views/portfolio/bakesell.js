@@ -48,6 +48,8 @@ class Bakesell extends React.Component {
                     color5={ BakesellData.color5 }
                     color6={ BakesellData.color6 }
                     colorCode='#ff77a0'
+                    WebsiteLink={ BakesellData.WebsiteLink }
+                    WebsiteLinkName={ BakesellData.WebsiteLinkName }
                 />
             </BakesellWrapper>
         )

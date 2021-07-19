@@ -46,6 +46,8 @@ class Bakesell extends React.Component {
                     color5={ VirapData.color5 }
                     color6={ VirapData.color6 }
                     colorCode='#ff5a5a'
+                    WebsiteLink={ VirapData.WebsiteLink }
+                    WebsiteLinkName={ VirapData.WebsiteLinkName }
                 />
             </BakesellWrapper>
         )

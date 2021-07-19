@@ -137,3 +137,13 @@ export const RowColorsPresent = styled(Row)`
 export const ColPresentColor = styled(Col)`
     margin: 5px;
 `;
+export const ASiteHref = styled.a`
+    color: ${ theme.colors.gray };
+    font-size: ${ theme.fontSize.DD_18_5 };
+    text-decoration: underline;
+    font-family: 'Poppins-SemiBold';
+
+    :hover {
+        color: ${ theme.colors.darkergray };
+    }
+`;
