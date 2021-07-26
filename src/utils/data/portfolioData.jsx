@@ -6,6 +6,7 @@ export const postCategory = {
     uiux: 'UI/UX',
     website: 'Website',
     advertisment: 'Advertisment',
+    app: 'App',
 }
 export const postPlatform = {
     browser: 'Browser',
@@ -63,6 +64,17 @@ export const postContent = [
         category: postCategory.uiux,
         dateOfRelease: `12 ${ month.may } 2021`,
         gradient: 'linear-gradient(90deg, #4051AD, #57B5F9)',
+        link: '/rentbuild',
+        image: `url( ${ imageRentbuild } )`,
+        imagePosition: 'center',
+        imageSize: '100%'
+    },
+    {
+        number: '04',
+        name: 'PrivaNews',
+        category: postCategory.app,
+        dateOfRelease: `25 ${ month.july } 2021`,
+        gradient: 'linear-gradient(90deg, #1217CA, #57B1F9)',
         link: '/rentbuild',
         image: `url( ${ imageRentbuild } )`,
         imagePosition: 'center',

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../../utils/theme/theme';
+import { SocialLinks } from '../../utils/data/socialLinks';
 
 import FacebookSvg from '../../assets/svg/Icons/Facebook';
 import InstagramSvg from '../../assets/svg/Icons/Instagram';
@@ -98,19 +99,19 @@ class FooterSocialMediaBar extends React.Component {
     render() {
         return (
             <FooterSocialBarWrapper>
-                <a href="https://facebook.com">
+                <a href={ SocialLinks.Facebook }>
                     <FacebookSvgStyled />
                 </a>
-                <a href="https://instagram.com">
+                <a href={ SocialLinks.Instagram }>
                     <InstagramSvgStyled />
                 </a>
-                <a href="https://github.com">
+                <a href={ SocialLinks.GitHub }>
                     <GithubSvgStyled />
                 </a>
-                <a href="https://linkedin.com">
+                <a href={ SocialLinks.LinkedIn }>
                     <LinkedInSvgStyled />
                 </a>
-                <a href="https://behance.net">
+                <a href={ SocialLinks.Behance }>
                     <BehanceSvgStyled />
                 </a>
             </FooterSocialBarWrapper>

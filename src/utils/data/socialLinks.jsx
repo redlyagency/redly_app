@@ -1,8 +1,8 @@
 export const SocialLinks = {
-    Instagram: 'https://instagram.com',
-    Behance: 'https://instagram.com',
-    GitHub: 'https://instagram.com',
-    Facebook: 'https://instagram.com',
-    Twitter: 'https://instagram.com',
-    LinkedIn: 'https://instagram.com',
+    Instagram: 'https://www.instagram.com/redly.me/',
+    Behance: 'https://www.behance.net/redlyagency',
+    GitHub: 'https://github.com/redlyagency',
+    Facebook: 'https://www.facebook.com/redlyagency',
+    Twitter: 'https://twitter.com/AgencyRedly',
+    LinkedIn: 'https://www.linkedin.com/company/redly-agency',
 }
