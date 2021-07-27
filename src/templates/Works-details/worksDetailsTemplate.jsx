@@ -148,6 +148,7 @@ class WorksDetails extends React.Component {
                                     }}
                                 >
                                     { StaticProjectDetailsData.fontPresentB }
+                                    { this.props.fontsName }
                                 </ColFontShowPresent>
                             </FontRowShowPresent>
                         </EmptyFullColAbout>
@@ -226,6 +227,16 @@ class WorksDetails extends React.Component {
                             }}
                         >
                             <GalleryImgItem src={ this.props.FourthGalleryImg } />
+                        </GalleryGrid>
+                        <GalleryGrid
+                            md={{
+                                span: 6,
+                            }}
+                            xs={{
+                                span: 12,
+                            }}
+                        >
+                            <GalleryImgItem src={ this.props.FifthGalleryImg } />
                         </GalleryGrid>
                     </GalleryGridWrapper>
                     <BackButtonComponentItem />

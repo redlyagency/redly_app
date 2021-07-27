@@ -39,3 +39,17 @@ export const RentbuildData = {
     color5: '#b9c9ff',
     color6: '#71adff',
 }
+
+export const PrivaNewsData = {
+    Title: "PrivaNews",
+    DetailContent: "The Redly agency in cooperation with PrivaNews has created a modern design and applications for the iOS system, which facilitates searching for information in the security and device encryption industry. The entire project includes a system for logging in, creating an account, selecting categories, viewing articles, viewing an article, editing an account, viewing messages and writing messages.",
+    BehanceProject: 'https://www.behance.net/gallery/124261635/PrivaNews-The-best-platform-for-security-news-viewing',
+    WebsiteLinkName: 'privanews.netlify.app',
+    WebsiteLink: 'https://privanews.netlify.app/',
+    color1: '#6bc9ff',
+    color2: '#58d0ff',
+    color3: '#6ce9ff',
+    color4: '#18cefc',
+    color5: '#41c9ff',
+    color6: '#71deff',
+}

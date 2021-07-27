@@ -14,6 +14,7 @@ import MainPortolioImg from '../../assets/img/portfolioGallery/rentbuild/main.pn
 import FirstGalleryImg from '../../assets/img/portfolioGallery/rentbuild/1.png';
 import SecondGalleryImg from '../../assets/img/portfolioGallery/rentbuild/2.png';
 import ThirdGalleryImg from '../../assets/img/portfolioGallery/rentbuild/3.png';
+import { FontsName } from '../../utils/data/staticProjectDetailsData';
 
 const BakesellWrapper = styled.div`
 
@@ -32,7 +33,7 @@ class Bakesell extends React.Component {
                     platformTitle={ postPlatform.browser }
                     categoryTitle={ postCategory.uiux }
                     designerTitle={ postDesigner.redly }
-                    toolsContent={ postTools.photoshop + ' / ' + postTools.illustrator + ' / ' + postTools.xd + ' / ' + postTools.afterEffects }
+                    toolsContent={ postTools.photoshop + ' / ' + postTools.illustrator + ' / ' + postTools.xd + ' / ' + postTools.afterEffects + ' / ' + postTools.vscode }
                     behanceLink={ RentbuildData.BehanceProject }
                     introContent={ RentbuildData.DetailContent }
                     mainPortfolioImage={ MainPortolioImg }
@@ -45,9 +46,10 @@ class Bakesell extends React.Component {
                     color4={ RentbuildData.color4 }
                     color5={ RentbuildData.color5 }
                     color6={ RentbuildData.color6 }
-                    colorCode='#71adff'
+                    colorCode='#71ADFF'
                     WebsiteLink={ RentbuildData.WebsiteLink }
                     WebsiteLinkName={ RentbuildData.WebsiteLinkName }
+                    fontsName={ FontsName.poppins }
                 />
             </BakesellWrapper>
         )

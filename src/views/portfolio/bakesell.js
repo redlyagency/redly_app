@@ -15,6 +15,7 @@ import FirstGalleryImg from '../../assets/img/portfolioGallery/bakesell/1.png';
 import SecondGalleryImg from '../../assets/img/portfolioGallery/bakesell/2.png';
 import ThirdGalleryImg from '../../assets/img/portfolioGallery/bakesell/3.png';
 import FourthGalleryImg from '../../assets/img/portfolioGallery/bakesell/4.png';
+import { FontsName } from '../../utils/data/staticProjectDetailsData';
 
 const BakesellWrapper = styled.div`
 
@@ -33,7 +34,7 @@ class Bakesell extends React.Component {
                     platformTitle={ postPlatform.browser }
                     categoryTitle={ postCategory.advertisment }
                     designerTitle={ postDesigner.redly }
-                    toolsContent={ postTools.photoshop + ' / ' + postTools.illustrator + ' / ' + postTools.xd + ' / ' + postTools.afterEffects }
+                    toolsContent={ postTools.photoshop + ' / ' + postTools.illustrator + ' / ' + postTools.xd + ' / ' + postTools.afterEffects + ' / ' + postTools.vscode }
                     behanceLink={ BakesellData.BehanceProject }
                     introContent={ BakesellData.DetailContent }
                     mainPortfolioImage={ MainPortolioImg }
@@ -47,9 +48,10 @@ class Bakesell extends React.Component {
                     color4={ BakesellData.color4 }
                     color5={ BakesellData.color5 }
                     color6={ BakesellData.color6 }
-                    colorCode='#ff77a0'
+                    colorCode='#FF77A0'
                     WebsiteLink={ BakesellData.WebsiteLink }
                     WebsiteLinkName={ BakesellData.WebsiteLinkName }
+                    fontsName={ FontsName.poppins }
                 />
             </BakesellWrapper>
         )
