@@ -1,15 +1,17 @@
 import imageBakesell from '../../assets/img/portfolioBannerBakesell.jpeg';
 import imageVirap from '../../assets/img/portfolioBannerVirap.jpg';
 import imageRentbuild from '../../assets/img/portfolioBannerRentbuild.jpeg';
+import imagePrivanews from '../../assets/img/portfolioBannerPrivaNews.png';
 
 export const postCategory = {
     uiux: 'UI/UX',
     website: 'Website',
     advertisment: 'Advertisment',
-    app: 'App',
+    app: 'APP',
 }
 export const postPlatform = {
     browser: 'Browser',
+    ios: 'iOS',
 }
 export const postDesigner = {
     redly: 'Redly Team',
@@ -19,6 +21,7 @@ export const postTools = {
     illustrator: 'Adobe Illustrator',
     xd: 'Adobe XD',
     afterEffects: 'Adobe After Effects',
+    vscode: 'Visual Studio Code',
 }
 const month = {
     january: 'January', //styczen
@@ -74,10 +77,10 @@ export const postContent = [
         name: 'PrivaNews',
         category: postCategory.app,
         dateOfRelease: `25 ${ month.july } 2021`,
-        gradient: 'linear-gradient(90deg, #1217CA, #57B1F9)',
-        link: '/rentbuild',
-        image: `url( ${ imageRentbuild } )`,
+        gradient: 'linear-gradient(90deg, #E1803F, #FFC8A2)',
+        link: '/privanews',
+        image: `url( ${ imagePrivanews } )`,
         imagePosition: 'center',
-        imageSize: '100%'
+        imageSize: '135%'
     },
 ]

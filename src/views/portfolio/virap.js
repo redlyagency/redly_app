@@ -14,6 +14,7 @@ import MainPortolioImg from '../../assets/img/portfolioGallery/virap/main.png';
 import FirstGalleryImg from '../../assets/img/portfolioGallery/virap/1.png';
 import SecondGalleryImg from '../../assets/img/portfolioGallery/virap/2.png';
 import ThirdGalleryImg from '../../assets/img/portfolioGallery/virap/3.png';
+import { FontsName } from '../../utils/data/staticProjectDetailsData';
 
 const BakesellWrapper = styled.div`
 
@@ -32,7 +33,7 @@ class Bakesell extends React.Component {
                     platformTitle={ postPlatform.browser }
                     categoryTitle={ postCategory.website }
                     designerTitle={ postDesigner.redly }
-                    toolsContent={ postTools.photoshop + ' / ' + postTools.illustrator + ' / ' + postTools.xd + ' / ' + postTools.afterEffects }
+                    toolsContent={ postTools.photoshop + ' / ' + postTools.illustrator + ' / ' + postTools.xd + ' / ' + postTools.afterEffects + ' / ' + postTools.vscode }
                     behanceLink={ VirapData.BehanceProject }
                     introContent={ VirapData.DetailContent }
                     mainPortfolioImage={ MainPortolioImg }
@@ -45,9 +46,10 @@ class Bakesell extends React.Component {
                     color4={ VirapData.color4 }
                     color5={ VirapData.color5 }
                     color6={ VirapData.color6 }
-                    colorCode='#ff5a5a'
+                    colorCode='#FF5A5A'
                     WebsiteLink={ VirapData.WebsiteLink }
                     WebsiteLinkName={ VirapData.WebsiteLinkName }
+                    fontsName={ FontsName.poppins }
                 />
             </BakesellWrapper>
         )

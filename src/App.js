@@ -13,6 +13,7 @@ import {
 import Bakesell from './views/portfolio/bakesell';
 import Virap from './views/portfolio/virap';
 import Rentbuild from './views/portfolio/rentbuild';
+import Privanews from './views/portfolio/privanews';
 
 import Navbar from './templates/Navbar/navbar';
 import ScrollToTop from './components/Scripts/scrollToTop';
@@ -97,6 +98,7 @@ function App({ location }) {
                     <Route path="/bakesell" component={ Bakesell } />
                     <Route path="/virap" component={ Virap} />
                     <Route path="/rentbuild" component={ Rentbuild } />
+                    <Route path="/privanews" component={ Privanews } />
                     {/* End Portfolio section - (Next version system i'll be updated) */}
                     <Route path="*" component={ NotFound } />
                   </Switch>

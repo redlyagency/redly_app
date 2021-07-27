@@ -124,7 +124,7 @@ export const UnderListUnderHeaderButtonWrapper = styled.div`
     padding-bottom: 55px;
 `;
 export const FontRowShowPresent = styled(Row)`
-
+    
 `;
 export const ColFontShowPresent = styled(Col)`
     color: ${ theme.colors.gray };
