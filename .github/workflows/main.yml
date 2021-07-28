@@ -65,6 +65,7 @@ jobs:
           footer: Maintenance information
           # Username to display in discord.
           username: Deployment Status [BOT]
+          color: '#00D8FF'
           # URL to png of discord avatar to use. Default is the GitHub monochrome mark cat logo.
           avatarUrl: https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png
           
