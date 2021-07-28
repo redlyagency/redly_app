@@ -44,11 +44,11 @@ jobs:
           # FTP password
           #password: 
           # Force SSL encryption
-          #forceSsl: # optional, default is false
+          #forceSsl: true
           # Local directory
-          #localDir: # optional, default is .
+          #localDir: .
           # Remote directory
-          #remoteDir: # optional, default is .
+          #remoteDir: .
           
       - name: Discord Webhook Notify
         # You may pin to the exact commit or the version.
@@ -60,13 +60,9 @@ jobs:
           # Severity level - info, warn, or error
           severity: info
           # Embed notification message. Use context expressions and environment variables to provide information. Default provides branch and user info.
-          description: deployment info 1
-          # Additional text after the notification message in case you want to retain the default message.
-          details: deployment info 2
+          description: The new update has been approved and implemented on the server.
           # Footer for the embed. Defaults to severity.
-          footer: deployment info 3
-          # Text to be sent as normal text above the embed. Use context expressions and environment variables to provide information.
-          text: deployment info 4
+          footer: Maintenance information
           # Username to display in discord.
           username: Deployment Status [BOT]
           # URL to png of discord avatar to use. Default is the GitHub monochrome mark cat logo.
