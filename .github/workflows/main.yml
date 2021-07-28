@@ -26,13 +26,50 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - run: rm -rf node_modules
-      - run: npm upgrade react-scripts
-      - run: npm install
-      - run: npm run build
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      #- run: npm cache clean
+      #- run: rm -rf node_modules
+      #- run: npm upgrade react-scripts
+      #- run: npm install
+      #- run: npm run build
+      
+      #- name: ftp-action
+        # You may pin to the exact commit or the version.
+        # uses: sebastianpopp/ftp-action@eb75c5cb29d23ee4a729720a27dfb66403cb0f6d
+        #uses: sebastianpopp/ftp-action@v2.0.0
+        #with:
+          # FTP host
+          #host: 
+          # FTP user
+          #user: 
+          # FTP password
+          #password: 
+          # Force SSL encryption
+          #forceSsl: # optional, default is false
+          # Local directory
+          #localDir: # optional, default is .
+          # Remote directory
+          #remoteDir: # optional, default is .
+          
+      - name: Discord Webhook Notify
+        # You may pin to the exact commit or the version.
+        # uses: rjstone/discord-webhook-notify@89b0bf43c2c8514f70d0dcba4a706b904e8a3112
+        uses: rjstone/discord-webhook-notify@v1.0.4
+        with:
+          # Discord webhook URL. Should be stored in a secret and inserted as a context expression.
+          webhookUrl: ${{ secrets.https://discord.com/api/webhooks/864636783308439563/ix7943Tz5uPpcY_LCIp3PuMG0nB3kVoPe-GOc7IgWX6y6mqKslBG68NvMwE2DRvP8jlm }}
+          # Severity level - info, warn, or error
+          severity: info
+          # Embed notification message. Use context expressions and environment variables to provide information. Default provides branch and user info.
+          description: deployment info 1
+          # Additional text after the notification message in case you want to retain the default message.
+          details: deployment info 2
+          # Footer for the embed. Defaults to severity.
+          footer: deployment info 3
+          # Text to be sent as normal text above the embed. Use context expressions and environment variables to provide information.
+          text: deployment info 4
+          # Username to display in discord.
+          username: Deployment Status [BOT]
+          # URL to png of discord avatar to use. Default is the GitHub monochrome mark cat logo.
+          avatarUrl: https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png
+          
+          
