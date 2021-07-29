@@ -205,10 +205,9 @@ class CustomizableGalleryComponent extends React.Component {
                         <NavLink
                             to={ value.link }
                             activeClassName="active1"
-                        >
-                        <PostWrapper
                             key={index}
                         >
+                        <PostWrapper>
                             <LineDecoration />
                             <PostRow>
                                 <NumberSection
