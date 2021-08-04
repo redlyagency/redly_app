@@ -47,9 +47,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins-Bold';
   }
   #root {margin: 0;padding: 0;}
-  ::-webkit-scrollbar {width: 12px;} 
+  ::-webkit-scrollbar {width: 13px;} 
   ::-webkit-scrollbar-track {background-color: ${ theme.colors.darkergray };}
-  ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.gray }; border-radius: 999px; border: 2px ${ theme.colors.darkergray } solid}
+  ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.gray }; border-radius: 999px; border: 3px ${ theme.colors.darkergray } solid}
   body {
     box-sizing: border-box;
     margin: 0; padding: 0;
