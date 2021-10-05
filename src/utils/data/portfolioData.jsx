@@ -2,6 +2,7 @@ import imageBakesell from '../../assets/img/portfolioBannerBakesell.jpeg';
 import imageVirap from '../../assets/img/portfolioBannerVirap.jpg';
 import imageRentbuild from '../../assets/img/portfolioBannerRentbuild.jpeg';
 import imagePrivanews from '../../assets/img/portfolioBannerPrivaNews.png';
+import imageMaingem from '../../assets/img/portfolioBannerMaingem.png';
 
 export const postCategory = {
     uiux: 'UI/UX',
@@ -80,6 +81,17 @@ export const postContent = [
         gradient: 'linear-gradient(90deg, #E1803F, #FFC8A2)',
         link: '/privanews',
         image: `url( ${ imagePrivanews } )`,
+        imagePosition: 'center',
+        imageSize: '135%'
+    },
+    {
+        number: '05',
+        name: 'Maingem',
+        category: postCategory.website,
+        dateOfRelease: `23 ${ month.august } 2021`,
+        gradient: 'linear-gradient(90deg, #742E95, #9F59BC)',
+        link: '/maingem',
+        image: `url( ${ imageMaingem } )`,
         imagePosition: 'center',
         imageSize: '135%'
     },

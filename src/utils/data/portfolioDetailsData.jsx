@@ -11,7 +11,6 @@ export const BakesellData = {
     color5: '#ffb9ce',
     color6: '#ff719d',
 }
-
 export const VirapData = {
     Title: "Virap",
     DetailContent: "Redly agency in cooperation with Virap has created a fully responsive website that allows you to contact us. The website has been designed in such a way as to intuitively and efficiently send an application for cooperation. Additionally, the agency created advertising banners in two dimensions.",
@@ -25,7 +24,6 @@ export const VirapData = {
     color5: '#ffb9b9',
     color6: '#ff7171',
 }
-
 export const RentbuildData = {
     Title: "Rentbuild",
     DetailContent: "The Redly agency in cooperation with Rentbuild has created a modern interface that facilitates intuitive use of the platform and quick house rentals. The project focused on optimizing the entire structure packed in a comfortable design. The last service in the field of this cooperation was the creation of an advertising campaign. For this purpose, the agency designed two advertising banners ready to be placed on the advertising sites on other websites.",
@@ -39,7 +37,6 @@ export const RentbuildData = {
     color5: '#b9c9ff',
     color6: '#71adff',
 }
-
 export const PrivaNewsData = {
     Title: "PrivaNews",
     DetailContent: "The Redly agency in cooperation with PrivaNews has created a modern design and applications for the iOS system, which facilitates searching for information in the security and device encryption industry. The entire project includes a system for logging in, creating an account, selecting categories, viewing articles, viewing an article, editing an account, viewing messages and writing messages.",
@@ -52,4 +49,17 @@ export const PrivaNewsData = {
     color4: '#18cefc',
     color5: '#41c9ff',
     color6: '#71deff',
+}
+export const MaingemData = {
+    Title: "Maingem",
+    DetailContent: "Redly agency in cooperation with Maingem created a modern logo and website. Maingem has been the best streaming aid partner for many years. In the project, we focused on both the lightness of the project and the presentation of a large amount of content. The project itself also includes a contact form and an ID with the company’s address.",
+    BehanceProject: '---',
+    WebsiteLinkName: 'maingem.netlify.app',
+    WebsiteLink: 'https://maingem.netlify.app/',
+    color1: '#2f0042',
+    color2: '#54116e',
+    color3: '#2f0042',
+    color4: '#77199c',
+    color5: '#4b0766',
+    color6: '#580f75',
 }

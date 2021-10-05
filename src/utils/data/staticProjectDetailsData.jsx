@@ -15,4 +15,5 @@ export const StaticProjectDetailsData = {
 export const FontsName = {
     poppins: 'Poppins',
     sfpro: 'San Francisco Pro',
+    nunito: 'Nunito',
 }
