@@ -14,6 +14,7 @@ import Bakesell from './views/portfolio/bakesell';
 import Virap from './views/portfolio/virap';
 import Rentbuild from './views/portfolio/rentbuild';
 import Privanews from './views/portfolio/privanews';
+import Maingem from './views/portfolio/maingem';
 
 import Navbar from './templates/Navbar/navbar';
 import ScrollToTop from './components/Scripts/scrollToTop';
@@ -47,9 +48,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins-Bold';
   }
   #root {margin: 0;padding: 0;}
-  ::-webkit-scrollbar {width: 5px;} 
-  ::-webkit-scrollbar-track {background-color: ${ theme.colors.gray };}
-  ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.black };}
+  ::-webkit-scrollbar {width: 13px;} 
+  ::-webkit-scrollbar-track {background-color: ${ theme.colors.darkergray };}
+  ::-webkit-scrollbar-thumb {background-color: ${ theme.colors.gray }; border-radius: 999px; border: 3px ${ theme.colors.darkergray } solid}
   body {
     box-sizing: border-box;
     margin: 0; padding: 0;
@@ -99,6 +100,7 @@ function App({ location }) {
                     <Route path="/virap" component={ Virap} />
                     <Route path="/rentbuild" component={ Rentbuild } />
                     <Route path="/privanews" component={ Privanews } />
+                    <Route path="/maingem" component={ Maingem } />
                     {/* End Portfolio section - (Next version system i'll be updated) */}
                     <Route path="*" component={ NotFound } />
                   </Switch>
